@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Integral CF';
-    src: url('/assets/fonts/Integral\ CF/.woff') format('woff');
+    src: url('/assets/fonts/Integral/Fontspring-DEMO-integralcf-bold.otf') format('woff');
     font-weight: 300 700;
     font-style: normal;
     font-display: swap;
@@ -20,11 +20,6 @@
     padding: 0;
     box-sizing: border-box;
     list-style: none;
-    font-family: 'Integral CF', sans-serif;
-}
-
-body {
-    font-family: 'Satoshi', sans-serif;
 }
 
 .container {

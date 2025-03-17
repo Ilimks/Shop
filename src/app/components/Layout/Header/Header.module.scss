@@ -1,0 +1,57 @@
+.header {
+    .header__box {
+      padding: 24px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+  
+      h3 {
+        font-size: 32px;
+        font-family: 'Integral CF', sans-serif;
+        margin: 0;
+  
+        @media (max-width: 768px) {
+          font-size: 28px;
+        }
+  
+        @media (max-width: 480px) {
+          font-size: 24px;
+        }
+      }
+  
+      ul {
+        display: flex;
+        column-gap: 24px;
+        font-family: 'Satoshi', sans-serif;
+        margin: 0;
+  
+        @media (max-width: 768px) {
+          font-size: 14px;
+          column-gap: 16px;
+          margin-bottom: 16px;
+        }
+  
+        @media (max-width: 480px) {
+          flex-direction: column;
+          font-size: 12px;
+          margin-bottom: 16px;
+        }
+      }
+  
+      .user_actions {
+        display: flex;
+        column-gap: 14px;
+        align-items: center;
+  
+        @media (max-width: 768px) {
+          column-gap: 10px;
+        }
+  
+        @media (max-width: 480px) {
+          column-gap: 8px;
+        }
+      }
+    }
+  }
+  
