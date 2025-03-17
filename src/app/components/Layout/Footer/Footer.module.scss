@@ -1,0 +1,91 @@
+.footer {
+    background-color: #F0F0F0;
+    padding: 50px 0 ;
+  }
+  
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 113px;
+  }
+  
+
+  
+  .brand h2 {
+    font-family: "Integral CF", sans-serif;;
+font-weight: 700;
+font-size: 33px;
+color: #000;
+
+  }
+  
+  .brand p {
+    font-family:  "Satoshi", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 157%;
+    color: rgba(0, 0, 0, 0.6);
+    width: 248px;
+    padding: 25px 0  ;
+  }
+  
+.socials{
+    margin-top: 35px;
+    display: flex;
+    gap: 12px;
+    
+}
+
+  .links {
+    display: flex;
+    gap: 123px;
+  }
+  
+  .links h4 {
+    font-family: "Satoshi", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 112%;
+    letter-spacing: 0.19em;
+    text-transform: uppercase;
+    color: #000;
+    margin-top: 14px;
+  }
+  
+  .links ul {
+    list-style: none;
+    padding-bottom: 50px;
+  }
+  
+  .links li {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 119%;
+    color: rgba(0, 0, 0, 0.6);
+    padding: 26px 0 12px;
+  }
+  
+  .line{
+    border: 1px solid rgba(0, 0, 0, 0.1);
+width: 1240px;
+height: 0px;
+  }
+
+  
+  .copyright {
+    margin-top: 35px;
+    font-family:  "Satoshi", sans-serif;
+font-weight: 400;
+font-size: 14px;
+color: rgba(0, 0, 0, 0.6);
+  }
+  
+
+  .bottom{
+    display: flex;
+    gap: 450px;
+  }
+  
+
+
+
