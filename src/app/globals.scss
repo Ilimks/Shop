@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Integral CF';
-    src: url('../../public/assets/fonts/Integral\ CF/.woff') format('woff');
+    src: url('/assets/fonts/Integral\ CF/.woff') format('woff');
     font-weight: 300 700;
     font-style: normal;
     font-display: swap;
@@ -8,8 +8,8 @@
 
 @font-face {
     font-family: 'Satoshi';
-    src: url('../../public/assets/fonts/Satoshi/Satoshi-Black.woff2') format('woff2'),
-         url('../../public/assets/fonts/Satoshi/Satoshi-Black.woff') format('woff');
+    src: url('/assets/fonts/Satoshi/Satoshi-Black.woff2') format('woff2'),
+         url('/assets/fonts/Satoshi/Satoshi-Black.woff') format('woff');
     font-weight: 300 700;
     font-style: normal;
     font-display: swap;
