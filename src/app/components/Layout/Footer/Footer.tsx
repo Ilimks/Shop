@@ -1,12 +1,12 @@
-import { Facebook } from "../../Shared /ui.icons/Facebook";
-import { Git } from "../../Shared /ui.icons/Git";
-import { Google } from "../../Shared /ui.icons/Google";
-import { Instagram } from "../../Shared /ui.icons/Instagram";
-import { Master } from "../../Shared /ui.icons/Master";
-import { Pay } from "../../Shared /ui.icons/Pay";
-import { PayPal } from "../../Shared /ui.icons/PayPal";
-import { Visa } from "../../Shared /ui.icons/Visa";
-import { Web } from "../../Shared /ui.icons/Web";
+import { Facebook } from "../../../shared/ui/Facebook";
+import { Git } from "../../../shared/ui/Git";
+import { Google } from "../../../shared/ui/Google";
+import { Instagram } from "../../../shared/ui/Instagram";
+import { Master } from "../../../shared/ui/Master";
+import { Pay } from "../../../shared/ui/Pay";
+import { PayPal } from "../../../shared/ui/PayPal";
+import { Visa } from "../../../shared/ui/Visa";
+import { Web } from "../../../shared/ui/Web";
 import styles from "./Footer.module.scss";
 export default function Footer() {
   return (
