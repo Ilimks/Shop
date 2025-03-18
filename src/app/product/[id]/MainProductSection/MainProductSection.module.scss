@@ -1,0 +1,34 @@
+.single_product{
+    .single_product_box{
+        display: flex;
+        column-gap: 40px;
+        .single_product_left{
+            display: flex;
+            flex-direction: column;
+            h3{
+                font-family: "Integral CF",sans-serif;
+            }
+            .rating{
+                display: flex;
+                align-items: center;
+                font-family: "Satoshi",sans-serif;
+            }
+            .price{
+                font-family: "Satoshi",sans-serif;
+                font-size: 32px;
+                gap: 12px;
+                display: flex;
+                .oldPrice{
+                    color: #0000004D;
+                }
+            }
+            .description{
+                p{
+                    color: #00000099;
+                    font-family: "Satoshi",sans-serif;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

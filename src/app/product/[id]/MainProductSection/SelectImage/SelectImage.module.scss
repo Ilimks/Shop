@@ -1,0 +1,21 @@
+.select_image {
+    display: flex;
+    column-gap: 14px;
+  
+    .select_image_items {
+      display: flex;
+      flex-direction: column;
+      row-gap: 14px;
+    }
+  
+    .image {
+      cursor: pointer;
+      transition: border 0.2s ease;
+    }
+  
+    .selected {
+      border: 1px solid #000000; 
+      border-radius: 8px;
+    }
+  }
+  
