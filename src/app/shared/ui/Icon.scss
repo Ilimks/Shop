@@ -1,0 +1,18 @@
+.content__not{
+    display: flex;
+  }
+  
+ .content__hovered{
+  display: none;
+ } 
+
+.content:hover{
+  
+  .content__not{
+    display: none;
+  }
+  
+  .content__hovered{
+    display: flex;
+  }
+}
