@@ -2,7 +2,7 @@
 import { useState } from "react";
 import styles from "./SelectImage.module.scss";
 import Image from "next/image";
-import { IProduct } from "../../../../types";
+import { IProduct } from "../../../../types/Product";
 
 interface SelectImageProps {
   product: IProduct;

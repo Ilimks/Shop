@@ -3,7 +3,7 @@ import React from "react";
 import mockClothingProducts from "@/app/mock";
 import { useParams } from "next/navigation";
 import MainProductImage from "./MainProductSection/MainProductSection";
-import { IProduct } from "../../types";
+import { IProduct } from "../../types/Product";
 
 const SingleProduct = () => {
   const params = useParams();
@@ -19,7 +19,7 @@ const SingleProduct = () => {
 
   return (
     <div>
-      <MainProductImage product={selectedProduct}/>
+      <MainProductImage product={selectedProduct} />
     </div>
   );
 };

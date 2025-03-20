@@ -1,34 +1,79 @@
-.single_product{
-    .single_product_box{
+.single_product {
+  .single_product_box {
+    display: flex;
+    column-gap: 40px;
+    .single_product_left {
+      display: flex;
+      flex-direction: column;
+      row-gap: 24px;
+      .product_info {
         display: flex;
-        column-gap: 40px;
-        .single_product_left{
-            display: flex;
-            flex-direction: column;
-            h3{
-                font-family: "Integral CF",sans-serif;
-            }
-            .rating{
-                display: flex;
-                align-items: center;
-                font-family: "Satoshi",sans-serif;
-            }
-            .price{
-                font-family: "Satoshi",sans-serif;
-                font-size: 32px;
-                gap: 12px;
-                display: flex;
-                .oldPrice{
-                    color: #0000004D;
-                }
-            }
-            .description{
-                p{
-                    color: #00000099;
-                    font-family: "Satoshi",sans-serif;
-                    font-size: 16px;
-                }
-            }
+        flex-direction: column;
+        row-gap: 14px;
+        h3 {
+          font-family: "Integral CF", sans-serif;
         }
+        .rating {
+          display: flex;
+          align-items: center;
+          font-family: "Satoshi", sans-serif;
+        }
+        .price {
+          font-family: "Satoshi", sans-serif;
+          font-size: 32px;
+          gap: 12px;
+          display: flex;
+          .oldPrice {
+            color: #0000004d;
+          }
+        }
+        .description {
+          p {
+            color: #00000099;
+            font-family: "Satoshi", sans-serif;
+            font-size: 16px;
+          }
+        }
+      }
+      .select_section {
+        display: flex;
+        flex-direction: column;
+        row-gap: 24px;
+        p {
+          font-family: "Satoshi", sans-serif;
+        }
+        .select_color {
+          display: flex;
+          flex-direction: column;
+          row-gap: 16px;
+        }
+        .select_size {
+          display: flex;
+          flex-direction: column;
+          row-gap: 16px;
+        }
+      }
+      .counter {
+        display: flex;
+        font-family: "Satoshi", sans-serif;
+        justify-content: space-between;
+        .counter_left {
+          display: flex;
+          background: #f0f0f0;
+          padding: 0 14px;
+          column-gap: 38px;
+          border-radius: 62px;
+          align-items: center;
+          button {
+            border: none;
+            font-size: 32px;
+          }
+          
+        }
+        .add_cart{
+            width: 70%;
+          }
+      }
     }
+  }
 }
