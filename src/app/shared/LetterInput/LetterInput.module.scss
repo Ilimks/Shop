@@ -1,0 +1,21 @@
+.letter{
+    width: 105%;
+    background: #F0F0F0 ; 
+    padding: 12px 124px 14px 52px; 
+    border: none;
+    border-radius: 62px;
+    font-size: 16px;
+    cursor: pointer; 
+    caret-color: transparent; 
+    user-select: none; 
+  }
+
+  .letter::placeholder{
+     font-family: "Satoshi", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #000;;
+    width: 105%;
+    padding-left: 33px;    
+  }
+  

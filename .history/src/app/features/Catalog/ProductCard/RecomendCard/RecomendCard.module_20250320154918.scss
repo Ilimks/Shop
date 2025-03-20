@@ -1,0 +1,11 @@
+.rating{
+    display: flex;
+    align-items: center;
+    gap: 13px;    
+}
+.content h3 {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 20px;
+    color: #000;
+}

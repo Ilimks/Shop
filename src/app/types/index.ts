@@ -1,4 +1,7 @@
+import { ReactNode } from "react";
+
 export interface IProduct {
+    name: ReactNode;
     id: string;
     title: string;
     images: string[];
@@ -11,8 +14,12 @@ export interface IProduct {
     article: string;
     sizes: string[];
     colors: string[];
-    rating: number;
     reviews?: IReview[];
+    discountPercentage?: number;
+    author: string;
+    rating: number;
+    comment: string;
+    date: string;
   }
   
   export interface IReview {

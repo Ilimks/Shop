@@ -1,0 +1,26 @@
+.ratings{
+    display: flex;
+    align-items: center;
+    gap: 13px;    
+
+}
+.content h3 {
+    font-family: "Satoshi", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #000;
+    margin: 16px 0 8px;
+
+}
+
+.des{
+    display: flex;
+    gap: 10px;
+}
+
+.price{
+    font-family: var(--font-family);
+font-weight: 700;
+font-size: 24px;
+color: #000;
+}
