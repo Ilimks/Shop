@@ -1,42 +1,49 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+  font-family: "Roboto";
+  src: url('../../public/assets/fonts/Roboto/Roboto-Regular.ttf');
+  src: url('../../public/assets/fonts/Roboto/Roboto-Bold.ttf');
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: "Poppins" sans-serif;
+  src: url('../../public/assets/fonts/Poppins/Poppins-Regular.ttf');
+  src: url('../../public/assets/fonts/Poppins/Poppins-Bold.ttf');
 }
 
 * {
-  box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Roboto";
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Poppins" sans-serif;
 }
 
 a {
   color: inherit;
-  text-decoration: none;
+  cursor: pointer;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+button {
+  cursor: pointer;
+  font-family: "Poppins" sans-serif;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+
+@media screen and (max-width: 1350px) {
+  .container{
+      width: 88%;
   }
 }

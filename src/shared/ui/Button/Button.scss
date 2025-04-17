@@ -1,0 +1,25 @@
+.Button  {
+    border-radius: 10px;
+    transition: all .3s ease-in-out;
+}
+
+
+
+
+.Button.show {
+    border: 1px solid #B88E2F;
+    background-color: #fff;
+    color: #B88E2F;
+}
+
+Button.show:hover {
+    background-color: #B88E2F;
+    color: #fff;
+}
+
+.Button.showSize {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 193%;
+    padding: 12px 50px;
+}
