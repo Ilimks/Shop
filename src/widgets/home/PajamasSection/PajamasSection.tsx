@@ -4,10 +4,12 @@ import styles from "./PajamasSection.module.scss";
 import { mockProducts } from "@/mock/productMock";
 import { Button } from "@/shared/ui/Button";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 export const PajamasSection: React.FC = () => {
 
   const [cardsToShow, setCardsToShow] = useState(8);
+  const router = useRouter();
 
   useEffect(() => {
     const handleResize = () => {
@@ -41,7 +43,7 @@ export const PajamasSection: React.FC = () => {
               </div>
               <Button
                 text='Показать больше'
-                onClick={() => console.log('Показать больше')}
+                onClick={() => router.push('/pajamas')}
                 variant='show'
                 size='showSize'
               />

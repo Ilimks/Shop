@@ -4,10 +4,12 @@ import styles from "./RobesSection.module.scss";
 import { mockProducts } from "@/mock/productMock";
 import { Button } from "@/shared/ui/Button";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 export const RobesSection: React.FC = () => {
 
   const [cardsToShow, setCardsToShow] = useState(16);  
+  const router = useRouter();
 
   useEffect(() => {
   const handleResize = () => {
@@ -40,7 +42,7 @@ export const RobesSection: React.FC = () => {
                   </div>
                   <Button
                     text='Показать больше'
-                    onClick={() => console.log('Показать больше')}
+                    onClick={() => router.push('/robes')}
                     variant='show'
                     size='showSize'
                   />

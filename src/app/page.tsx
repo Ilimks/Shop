@@ -1,3 +1,4 @@
+import { Loader } from "@/shared/ui/Loader";
 import { AboutSection } from "@/widgets/home/AboutSection/AboutSection";
 import { HeroSection } from "@/widgets/home/HeroSection/HeroSection";
 import { PajamasSection } from "@/widgets/home/PajamasSection/PajamasSection";
@@ -7,13 +8,13 @@ import { CategorySection } from "@/widgets/home/СategorySection/СategorySectio
 
 export default function Home() {
   return (
-    <main>
-      <HeroSection/>
-      <CategorySection/>
-      <PajamasSection/>
-      <RobesSection/>
-      <SuitsSection/>
-      <AboutSection/>
-    </main>
+      <main>
+        <HeroSection/>
+        <CategorySection/>
+        <PajamasSection/>
+        <RobesSection/>
+        <SuitsSection/>
+        <AboutSection/>
+      </main>
   );
 }

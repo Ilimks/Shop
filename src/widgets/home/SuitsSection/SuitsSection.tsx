@@ -4,10 +4,12 @@ import styles from "./SuitsSection.module.scss";
 import { mockProducts } from "@/mock/productMock";
 import { Button } from "@/shared/ui/Button";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 export const SuitsSection: React.FC = () => {
 
   const [cardsToShow, setCardsToShow] = useState(24);
+  const router = useRouter()
 
   useEffect(() => {
     const handleResize = () => {
@@ -41,7 +43,7 @@ export const SuitsSection: React.FC = () => {
               </div>
               <Button
                 text='Показать больше'
-                onClick={() => console.log('Показать больше')}
+                onClick={() => router.push('/suits')}
                 variant='show'
                 size='showSize'
               />
