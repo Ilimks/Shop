@@ -23,3 +23,26 @@ Button.show:hover {
     line-height: 193%;
     padding: 12px 50px;
 }
+
+
+
+
+.Button.filter{
+    border: none;
+    border-radius: 62px;
+    background-color: #B88E2F;
+    color: #fff;
+}
+
+Button.filter:hover {
+    border: 1px solid #B88E2F;
+    background: none;
+    color: #B88E2F;
+}
+
+.Button.filterSize {
+    width: 100%;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 14.5px 0;
+}

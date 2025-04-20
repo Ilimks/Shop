@@ -8,7 +8,7 @@ export interface ProductCardProps {
 export interface ButtonProps {
     text: string;
     onClick: () => void;
-    variant?: 'show' | 'second' | 'third';
-    size?: 'showSize' | 'medium' | 'large';
+    variant?: 'show' | 'filter' | 'third';
+    size?: 'showSize' | 'filterSize' | 'large';
     disabled?: boolean;
 };

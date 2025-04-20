@@ -1,9 +1,12 @@
 import styles from './pajamas.module.scss'
+import { FilterPajamasSection } from '@/widgets/pajamas/FilterPajamasSection/FilterPajamasSection';
+import { AboutPajamasSection } from '@/widgets/pajamas/AboutPajamasSection/AboutPajamasSection';
 
 export default function Pajamas() {
   return (
     <main>
-       <h1>Прижамы</h1>
+      <FilterPajamasSection/>
+      <AboutPajamasSection/>
     </main>
   );
 }

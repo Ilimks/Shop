@@ -24,6 +24,7 @@ export const RobesSection: React.FC = () => {
   window.addEventListener('resize', handleResize);
   return () => window.removeEventListener('resize', handleResize);
   }, []);  
+  
   return(
       <section className={styles.robes}>
           <div className="container">

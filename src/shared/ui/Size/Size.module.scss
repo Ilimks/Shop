@@ -1,0 +1,32 @@
+.wrapper {
+  margin-top: 24px;
+}
+
+.sizes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(48px, 1fr));
+  gap: 10px;
+}
+
+.size {
+  text-align: center;
+  padding: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.size:hover {
+  background-color: #f4f4f4;
+  color: black;
+}
+
+.active {
+  background-color: black;
+  color: white;
+  border-color: black;
+}
+  

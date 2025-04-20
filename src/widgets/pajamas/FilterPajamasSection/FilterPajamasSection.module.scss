@@ -1,0 +1,20 @@
+.filterPajamas {
+    padding: 40px 0;
+
+    &__name {
+        font-size: 40px;
+        font-weight: 700;
+    }
+
+    &__box {
+        display: flex;
+        column-gap: 40px;
+        padding-top: 30px;
+
+        &__products {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+    }
+}
