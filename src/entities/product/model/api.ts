@@ -1,7 +1,7 @@
 import { Product } from "./types";
 
 export async function getAllProducts(): Promise<Product[]> {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/products`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/product`, {
     cache: "no-store",
   });
 
@@ -13,7 +13,7 @@ export async function getAllProducts(): Promise<Product[]> {
 
 export async function getProductsByCategoryId(categoryId: number): Promise<Product[]> {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/products?categoryId=${categoryId}`,
+    `${process.env.NEXT_PUBLIC_API_URL}/category/${categoryId}`,
     { cache: "no-store" }
   );
 
@@ -24,7 +24,7 @@ export async function getProductsByCategoryId(categoryId: number): Promise<Produ
 
 
 export async function getProductById(id: string): Promise<Product> {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/products/${id}`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/product/${id}`, {
     cache: "no-store",
   });
 

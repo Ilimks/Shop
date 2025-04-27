@@ -30,7 +30,7 @@ export const FilterPajamasSection: React.FC = () => {
                 <div className={styles.filterPajamas__box}>
                     <FilterAside/>
                     <div className={styles.filterPajamas__box__products}>
-                        {filteredProducts.slice(0, 9).map((el,idx) => (
+                        {filteredProducts.map((el,idx) => (
                             <ProductCard
                               title={el.title}
                               image={el.image}
