@@ -24,4 +24,9 @@ export interface InputProps {
     error: boolean
     disabled?: boolean
     onChange: (e: ChangeEvent<HTMLInputElement>) => void
-  }
+}
+
+export interface PaginationProps<T> {
+    objects: T[];
+    limit: number;
+}

@@ -1,0 +1,53 @@
+.pagination {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  
+    &__items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+  
+    // Uncomment the following lines if you want to style the raw items
+    // Декоментировать следующие строки, если вы хотите стилизовать сырые элементы
+    
+    // &__item {
+    //   padding: 1rem;
+    //   border: 1px solid #ddd;
+    //   border-radius: 8px;
+    //   background-color: #fafafa;
+    //   min-width: 150px;
+    //   text-align: center;
+    // }
+  
+    &__controls {
+      display: flex;
+      gap: 0.5rem;
+    }
+  
+    &__button {
+      padding: 0.5rem 1rem;
+      border: 1px solid #ccc;
+      background-color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+  
+      &:hover:not(:disabled) {
+        background-color: #f0f0f0;
+      }
+  
+      &:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+      }
+  
+      &__active {
+        background-color: rgb(197, 197, 197);
+      }
+    }
+  }
+  
