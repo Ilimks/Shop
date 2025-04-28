@@ -1,13 +1,13 @@
 @font-face {
   font-family: "Roboto";
-  src: url('../../public/assets/fonts/Roboto/Roboto-Regular.ttf');
-  src: url('../../public/assets/fonts/Roboto/Roboto-Bold.ttf');
+  src: url('../../../public/assets/fonts/Roboto/Roboto-Regular.ttf');
+  src: url('../../../public/assets/fonts/Roboto/Roboto-Bold.ttf');
 }
 
 @font-face {
   font-family: "Poppins" sans-serif;
-  src: url('../../public/assets/fonts/Poppins/Poppins-Regular.ttf');
-  src: url('../../public/assets/fonts/Poppins/Poppins-Bold.ttf');
+  src: url('../../../public/assets/fonts/Poppins/Poppins-Regular.ttf');
+  src: url('../../../public/assets/fonts/Poppins/Poppins-Bold.ttf');
 }
 
 * {
