@@ -2,6 +2,7 @@
 import { useRouter } from 'next/navigation';
 import styles from './Header.module.scss'
 import Image from "next/image";
+import { AuthButton } from '@/features/auth/ui/AuthButton';
 
 export const Header: React.FC = () => {
 
@@ -24,8 +25,15 @@ export const Header: React.FC = () => {
                     </nav>
 
                     <div className={styles.header__box__right}>
-                        <Image onClick={() => router.push('/account')} className={styles.header__box__right__account} src="/assets/icons/AccountIcon.svg" alt="Иконка Аккаунт" width={28} height={28} />
-                        <Image onClick={() => router.push('/cart')} className={styles.header__box__right__cart} src="/assets/icons/CartIcon.svg" alt="Иконка Корзина" width={28} height={28} />
+                        <AuthButton/>
+                        <Image 
+                          onClick={() => router.push('/cart')} 
+                          className={styles.header__box__right__cart} 
+                          src="/assets/icons/CartIcon.svg" 
+                          alt="Иконка Корзина" 
+                          width={28} 
+                          height={28} 
+                        />
                     </div>
 
                 </div>

@@ -1,0 +1,25 @@
+.modalContent {
+    padding: 20px;
+    width: 100%;
+    max-width: 28rem;
+    
+  }
+  
+  .title {
+    font-size: 26px;
+    text-align: center;
+  }
+  
+  .errorMessage {
+    margin-bottom: 1rem; // mb-4
+    padding: 0.5rem; // p-2
+    background-color: #fee2e2; // bg-red-100
+    color: #b91c1c; // text-red-700
+    border-radius: 0.25rem; // rounded
+    font-size: 0.875rem; // text-sm
+  }
+  
+  .switchModeButton {
+    margin-top: 1rem; // mt-4
+    text-align: center;
+  }

@@ -1,6 +1,3 @@
-import "./globals.css";
-import { Header } from "@/widgets/header/Header";
-import { Footer } from "@/widgets/footer/Footer";
 import { ReduxProvider } from "@/shared/providers/ReduxProvider"; 
 
 export const metadata = {
@@ -17,9 +14,10 @@ export default function RootLayout({
     <html lang="ru">
       <body>
         <ReduxProvider>
-          <Header/>
+            <header>
+                <h2>wdawdawd</h2>
+            </header>
             {children}
-          <Footer/>
         </ReduxProvider>
       </body>
     </html>
