@@ -47,3 +47,7 @@ button {
       width: 88%;
   }
 }
+
+.modal-overlay {
+  z-index: 9999 !important;
+}
