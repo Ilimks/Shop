@@ -10,6 +10,12 @@ export const SidebarAdmin: React.FC = () => {
       <nav className={styles.sidebar_nav}>
         <ul className={styles.sidebar__nav__ul}>
           <li
+            onClick={() => router.push("/admin")}
+            className={styles.sidebar__nav__li}
+          >
+            Заказы
+          </li>
+          <li
             onClick={() => router.push("/admin/products")}
             className={styles.sidebar__nav__li}
           >
@@ -32,12 +38,6 @@ export const SidebarAdmin: React.FC = () => {
             className={styles.sidebar__nav__li}
           >
             Цвета
-          </li>
-          <li
-            onClick={() => router.push("/admin")}
-            className={styles.sidebar__nav__li}
-          >
-            Заказы
           </li>
           <li
             onClick={() => router.push("/admin/coupons")}
