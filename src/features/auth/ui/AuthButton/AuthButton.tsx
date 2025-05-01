@@ -15,7 +15,6 @@ export const AuthButton = () => {
       router.push('/account');
     } else {
       dispatch(setAuthModalOpen(true));
-      console.log('Modal open dispatched');
     }
   };
 
@@ -29,12 +28,11 @@ export const AuthButton = () => {
         width={28} 
         height={28} 
       />
+      {user && (
+        <span className="ml-2 hidden sm:inline">
+          {user.name}
+        </span>
+      )}
     </>
   );
 };
-
-// {user && (
-//     <span className="ml-2 hidden sm:inline">
-//       {user.fullName.split(' ')[0]}
-//     </span>
-//   )}

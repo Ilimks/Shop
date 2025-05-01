@@ -19,7 +19,18 @@
     font-size: 0.875rem; // text-sm
   }
   
-  .switchModeButton {
-    margin-top: 1rem; // mt-4
-    text-align: center;
-  }
+.switchModeWrapper {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.switchModeButton {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.switchModeButton:hover {
+  color: var(--primary-hover);
+}
