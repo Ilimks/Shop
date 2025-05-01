@@ -14,21 +14,21 @@ import storage from 'redux-persist/lib/storage';
 import productsReducer from './productsSlice';
 import cartReducer from './cartSlice';
 import authReducer from './authSlice';
-import orderReducer from './orderSlice'
+import orderReducer from './orderSlice';
+import adminReducer from './adminSlice';
 
-// Конфигурация Persist для auth и cart (можно добавить другие редьюсеры при необходимости)
 const persistConfig = {
   key: 'root',
   storage,
-  whitelist: ['auth', 'cart'], // Сохраняем только auth и cart
-  // blacklist: ['products'] // Можно исключить ненужные редьюсеры
+  whitelist: ['auth', 'cart'], 
 };
 
 const rootReducer = combineReducers({
   products: productsReducer,
   cart: cartReducer,
   auth: authReducer,
-  orders: orderReducer
+  orders: orderReducer,
+  admin: adminReducer
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
