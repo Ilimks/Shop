@@ -10,12 +10,11 @@ import {
   PURGE,
   REGISTER,
 } from 'redux-persist';
-import storage from 'redux-persist/lib/storage'; // localStorage по умолчанию
-
-// Импортируем редьюсеры
+import storage from 'redux-persist/lib/storage';
 import productsReducer from './productsSlice';
 import cartReducer from './cartSlice';
 import authReducer from './authSlice';
+import orderReducer from './orderSlice'
 
 // Конфигурация Persist для auth и cart (можно добавить другие редьюсеры при необходимости)
 const persistConfig = {
@@ -29,6 +28,7 @@ const rootReducer = combineReducers({
   products: productsReducer,
   cart: cartReducer,
   auth: authReducer,
+  orders: orderReducer
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

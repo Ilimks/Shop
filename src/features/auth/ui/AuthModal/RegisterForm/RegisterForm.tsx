@@ -5,6 +5,7 @@ import { register } from '@/store/authSlice';
 import { Button } from '@/shared/ui/Button';
 import { Input } from '@/shared/ui/Input';
 import styles from './RegisterForm.module.scss';
+import { useRouter } from 'next/navigation';
 
 interface RegisterFormProps {
   isLoading: boolean;
@@ -12,6 +13,7 @@ interface RegisterFormProps {
 
 export const RegisterForm = ({ isLoading }: RegisterFormProps) => {
   const dispatch = useAppDispatch();
+  const router = useRouter()
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [address, setAddress] = useState('');
@@ -29,6 +31,7 @@ export const RegisterForm = ({ isLoading }: RegisterFormProps) => {
       address,     
       number,      
     }));
+    router.push('/account');
   };
 
   return (

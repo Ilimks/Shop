@@ -47,14 +47,15 @@ export const AuthModal = () => {
           <RegisterForm isLoading={status === 'loading'} />
         )}
 
-        <div className={styles.switchModeButton}>
-          <Button 
-            variant="show" 
+        <div className={styles.switchModeWrapper}>
+          <button
+            type="button"
+            className={styles.switchModeButton}
             onClick={switchMode}
-            text={authMode === 'login' 
-              ? 'Зарегистрироваться' 
-              : 'У вас уже есть аккаунт? Войти'}
-          />
+            aria-label={authMode === 'login' ? 'Перейти к регистрации' : 'Перейти к входу в аккаунт'}
+          >
+            {authMode === 'login' ? 'Зарегистрироваться' : 'У вас уже есть аккаунт? Войти'}
+          </button>
         </div>
       </div>
     </Modal>

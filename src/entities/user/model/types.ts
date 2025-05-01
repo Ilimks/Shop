@@ -5,6 +5,7 @@ export interface User {
     number: string;
     email: string;
     address: string;
+    isAdmin: boolean;
     favorites: number[];
 }
   

@@ -1,0 +1,52 @@
+.purchaseHistory {
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .ordersList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .orderItem {
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+  }
+  
+  .orderHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  
+  .orderDetails {
+    margin-bottom: 10px;
+    p {
+      margin: 5px 0;
+    }
+  }
+  
+  .products {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed #ddd;
+  }
+  
+  .product {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    font-size: 14px;
+  }
+  
+  .noOrders {
+    color: #666;
+    text-align: center;
+    padding: 20px;
+  }

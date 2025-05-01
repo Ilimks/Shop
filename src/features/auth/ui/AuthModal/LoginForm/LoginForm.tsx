@@ -6,6 +6,7 @@ import { Button } from '@/shared/ui/Button';
 import { Input } from '@/shared/ui/Input';
 import { Typography } from '@/shared/ui/Typography';
 import styles from './LoginForm.module.scss';
+import { useRouter } from 'next/navigation';
 
 interface LoginFormProps {
   isLoading: boolean;
@@ -13,12 +14,14 @@ interface LoginFormProps {
 
 export const LoginForm = ({ isLoading }: LoginFormProps) => {
   const dispatch = useAppDispatch();
+  const router = useRouter()
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     dispatch(login({ email, password }));
+    router.push('/account')
   };
 
   return (
