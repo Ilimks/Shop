@@ -7,6 +7,11 @@ export const SidebarAdmin: React.FC = () => {
 
   return (
     <div className={styles.sidebar}>
+      <div className={styles.burger}>
+        <span className={styles.burger__line}></span>
+        <span className={styles.burger__line}></span>
+        <span className={styles.burger__line}></span>
+      </div>
       <nav className={styles.sidebar_nav}>
         <ul className={styles.sidebar__nav__ul}>
           <li
