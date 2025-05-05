@@ -2,10 +2,17 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
+    width: 100%;
+    overflow-y: auto;
+    height: 800px;
+    max-height: 90%;
+    padding: 20px;
+    background-color: #fff9f2;
   }
   
   .empty {
     text-align: center;
+    height: 90%;
     padding: 32px;
     color: #666;
     font-size: 1.1rem;

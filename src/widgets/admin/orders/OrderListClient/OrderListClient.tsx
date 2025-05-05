@@ -15,6 +15,16 @@ export const OrderListClient = () => {
   const [error, setError] = useState<string | null>(null);
   const router = useRouter()
 
+  const handleOrderConfirmed = (confirmedOrder: Order) => {
+    setOrders(orders.map(order => 
+      order.id === confirmedOrder.id ? confirmedOrder : order
+    ));
+  };
+
+  const handleOrderDeleted = (deletedOrderId: number) => {
+    setOrders(orders.filter(order => order.id !== deletedOrderId));
+  };
+
   useEffect(() => {
     if (!token) {
       setError('Authentication required');
@@ -48,5 +58,11 @@ export const OrderListClient = () => {
     return <p>Error</p>;
   }
 
-  return <OrderList orders={orders} />;
+  return (
+    <OrderList 
+      orders={orders} 
+      onOrderConfirmed={handleOrderConfirmed}
+      onOrderDeleted={handleOrderDeleted}
+    />
+  );
 };

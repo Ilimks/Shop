@@ -52,8 +52,8 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
     return null;
   }
 
-  return <>
+  return <div className='container'>
   <SidebarAdmin/>
   {children}
-  </>;
+  </div>;
 };
