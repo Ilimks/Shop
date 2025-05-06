@@ -1,0 +1,24 @@
+.account {
+    padding: 40px 0;
+
+    &__name {
+        font-size: 40px;
+        font-weight: 700;
+        
+    }
+
+    .logoutButton {
+        padding: 10px 40px;
+        border: 1px solid rgb(155, 153, 153);
+        border-radius: 5px;
+        background-color: white;
+        font-size: 16px;
+        font-weight: 500;
+        transition: all .3s ease;
+        margin-top: 20px;
+    }
+
+    .logoutButton:hover {
+        background-color: antiquewhite;
+    }
+}

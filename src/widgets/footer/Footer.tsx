@@ -1,6 +1,7 @@
 "use client"
 import { useRouter } from 'next/navigation';
 import styles from './Footer.module.scss'
+import Image from 'next/image';
 
 export const Footer: React.FC = () => {
 
@@ -11,7 +12,87 @@ export const Footer: React.FC = () => {
             <div className="container">
                 <div className={styles.footer__box}>
 
-                    <div className={styles.footer__catalog}>
+                    <div className={styles.footer__left}>
+                        <Image 
+                          className={styles.footer__left__logo} 
+                          src="/assets/icons/FooterLogo.svg" 
+                          alt="Иконка FooterLogo" 
+                          width={177} 
+                          height={116} 
+                        />
+                        <div className={styles.line}></div>
+                        <p className={styles.text}>Belle Nuit — пижамы для снов, которые хочется повторить</p>
+                        <div className={styles.footer__left__social}>
+                            <Image 
+                              className={styles.telega} 
+                              src="/assets/icons/Telega.svg" 
+                              alt="Иконка Telega" 
+                              width={28} 
+                              height={28} 
+                            />
+                            <Image 
+                              className={styles.insta} 
+                              src="/assets/icons/Insta.svg" 
+                              alt="Иконка Insta" 
+                              width={28} 
+                              height={28} 
+                            />
+                            <Image 
+                              className={styles.whatsApp} 
+                              src="/assets/icons/WhatsApp.svg" 
+                              alt="Иконка WhatsApp" 
+                              width={28} 
+                              height={28} 
+                            />
+                        </div>
+                    </div>
+
+                    <div className={styles.footer__center1}>
+                        <h3 className={styles.title}>Контакты</h3>
+                        <nav className={styles.footer__nav}>
+                            <ul className={styles.nav__ul}>
+                                <li onClick={() => router.push('/account')} className={styles.nav__ul__li1}>Ортосайский рынок,
+                                2 ряд, 5 контейнер</li>
+                                <li onClick={() => router.push('/')} className={styles.nav__ul__li2}>ilimk9731@gmail.com</li>
+                                <li onClick={() => router.push('/cart')} className={styles.nav__ul__li3}>+996 555 444 123</li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div className={styles.footer__center2}>
+                        <h3 className={styles.title}>Аккаунт</h3>
+                        <nav className={styles.footer__nav}>
+                            <ul className={styles.nav__ul}>
+                                <li onClick={() => router.push('/account')} className={styles.nav__ul__li}>Войти в аккаунт</li>
+                                <li onClick={() => router.push('/')} className={styles.nav__ul__li}>Избранное</li>
+                                <li onClick={() => router.push('/cart')} className={styles.nav__ul__li}>Корзина</li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div className={styles.footer__right}>
+                        <h3 className={styles.title}>Навигация</h3>
+                        <nav className={styles.footer__nav}>
+                            <ul className={styles.nav__ul}>
+                                <li onClick={() => router.push('/')} className={styles.nav__ul__li}>Главная</li>
+                                <li onClick={() => router.push('/')} className={styles.nav__ul__li}>Каталог</li>
+                                <li onClick={() => router.push('/pajamas')} className={styles.nav__ul__li}>Пижама</li>
+                                <li onClick={() => router.push('/suits')} className={styles.nav__ul__li}>Костюм</li>
+                                <li onClick={() => router.push('/robes')} className={styles.nav__ul__li}>Халат</li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                </div>
+                <p className={styles.footer__rights}>© 2025 Все права</p>
+            </div>
+        </footer>
+    )
+}
+
+
+
+{/* <div className={styles.footer__catalog}>
                         <h2 className={styles.footer__catalog__name}>КАТАЛОГ</h2>
                         <nav className={styles.footer__catalog__nav}>
                             <ul className={styles.footer__catalog__ul}>
@@ -45,10 +126,4 @@ export const Footer: React.FC = () => {
 
                             </div>
                         </nav>
-                    </div>
-
-                </div>
-            </div>
-        </footer>
-    )
-}
+                    </div> */}

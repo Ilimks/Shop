@@ -3,7 +3,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useFilterState } from "@/features/filters";
 import { Range } from "@/shared/ui/Range";
-import { Button } from "@/shared/ui/Button";
+import { Button } from "@/shared/ui/Buttons/ui/Button";
 import { Color } from "@/shared/ui/Color";
 import { Size } from "@/shared/ui/Size";
 import { Accordion } from "@/shared/ui/Accordion";
