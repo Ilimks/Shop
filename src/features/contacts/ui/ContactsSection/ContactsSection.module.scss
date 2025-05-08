@@ -1,40 +1,60 @@
 .contacts {
-    padding: 40px 0;
-
-    &__name {
-        font-size: 40px;
-        font-weight: 700;
-    }
+    padding-bottom: 24px;
 
     &__box {
-        display: flex;
-        column-gap: 50px;
-        padding-top: 30px;
-       
-        &__left {
-            width: 300px;
-            height: 400px;
-            border: 1px solid rgb(80, 78, 78);
-            border-radius: 20px;
-            background-color: #fff9f2;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-
-            &__phone1,
-            &__phone2,
-            &__email,
-            &__address,
-            &__social {
-                display: flex;
-                flex-direction: column;
-                gap: 10px;
-
-                p {
-                    color: #797877;
-                }
-            }
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    &__item {
+      border: 1px solid #1e2235;
+      border-radius: 10px;
+    
+      .contacts__title {
+        font-weight: 400;
+        font-size: 16px;
+        color: #808080;
+        padding-bottom: 4px;
+      }
+    
+      .contacts__des {
+        font-weight: 500;
+        font-size: 16px;
+        max-width: 170px;
+        position: relative;
+        cursor: pointer;
+    
+        &::after {
+          content: '';
+          position: absolute;
+          width: 24px;
+          height: 24px;
+          top: var(--icon-top, -12px);
+          left: -32px;
+          background-image: var(--icon-url);
+          background-repeat: no-repeat;
         }
+      }
+    }
+    
+    &__social {
+      padding: 10px 46px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    
+      .contacts__title {
+        color: #000;
+      }
+    }
+    
+    &__imgs {
+      display: flex;
+      column-gap: 12px;
+    
+      .img {
+        cursor: pointer;
+      }
     }
 }

@@ -1,0 +1,27 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 16px;
+  gap: 6px;
+  margin: 24px 0;
+}
+  
+.breadcrumbItem {
+  display: flex;
+  align-items: center;
+}
+  
+.link {
+  color: #000;
+  text-decoration: none;
+}
+  
+.current {
+  color: #3d4fa6;
+}
+  
+.separator {
+  margin: 3px 0 0;
+}
+  

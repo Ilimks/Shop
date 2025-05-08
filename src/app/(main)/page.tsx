@@ -10,11 +10,11 @@ export default function Home() {
   return (
       <main>
         <HeroSection/>
-        <CategorySection/>
-        <PajamasSection/>
-        <RobesSection/>
-        <SuitsSection/>
-        <AboutSection/>
+        {/* <CategorySection/> */}
+        {/* <PajamasSection/> */}
+        {/* <RobesSection/> */}
+        {/* <SuitsSection/> */}
+        {/* <AboutSection/> */}
       </main>
   );
 }

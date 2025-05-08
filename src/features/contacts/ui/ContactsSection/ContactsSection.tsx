@@ -1,48 +1,88 @@
-import styles from './ContactsSection.module.scss'
+import styles from './ContactsSection.module.scss';
+import Image from 'next/image';
+
+const contactItems = [
+  {
+    id: 1,
+    title: 'Адрес:',
+    description: 'Ортосайский рынок, 2 ряд, 5 контейнер',
+    icon: '/assets/icons/LocationIcon.svg',
+    padding: '12px 14.5px 12px 46.5px',
+    width: '277px',
+    iconTop: '-2px'
+  },
+  {
+    id: 2,
+    title: 'Ежедневно:',
+    description: 'с 09:00 до 18:00',
+    icon: '/assets/icons/TimeIcon.svg',
+    padding: '22px 19px 22px 51px',
+    iconTop: '-12px'
+  },
+  {
+    id: 3,
+    title: 'Контактный телефон:',
+    description: '+996 554 745 123',
+    icon: '/assets/icons/PhoneIcon.svg',
+    padding: '22px 19px 22px 51px',
+    iconTop: '-12px'
+  },
+  {
+    id: 4,
+    title: 'Email:',
+    description: 'bellenuit@gmail.com',
+    icon: '/assets/icons/EmailIcon.svg',
+    padding: '22px 19px 22px 51px',
+    iconTop: '-12px'
+  }
+];
+
+const socialIcons = [
+  { src: '/assets/icons/TelegaIcon.svg', alt: 'TelegaIcon' },
+  { src: '/assets/icons/WhatsAppIcon.svg', alt: 'WhatsAppIcon' }
+];
 
 export const ContactsSection: React.FC = () => {
-    return (
-        <section className={styles.contacts}>
-            <div className="container">
-                <h1 className={styles.contacts__name}>Контакты</h1>
-                <div className={styles.contacts__box}>
-
-                    <div className={styles.contacts__box__left}>
-                        <div className={styles.contacts__box__left__phone1}>
-                            <p>Телефоны</p>
-                            <h3><a href="tel:+996706999999">0(706)99-99-99</a></h3>
-                            <h3><a href="tel:+996706888888">0(706)88-88-88</a></h3>
-                        </div>
-                        <div className={styles.contacts__box__left__email}>
-                            <p>Email</p>
-                            <h3><a href="mailto:ilimk9731@gmail.com">ilimk9731@gmail.com</a></h3>
-                        </div>
-                        <div className={styles.contacts__box__left__address}>
-                            <p>Адресс</p>
-                            <h3>г. Бишкек р/к Орто-Сай</h3>
-                        </div>
-                        <div className={styles.contacts__box__left__social}>
-                            <p>Социальные сети</p>
-                            <div className={styles.contacts__box__left__social__imgs}>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className={styles.contacts__box__right}>
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2924.5939641571565!2d74.5337469758397!3d42.84123867115973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389ecb0a4ab5c6c3%3A0x8b83786eab2d27fc!2z0J7QsdC40LvQtdC90LjQuiDQotCw0YDQutC-0LLQsNGC0YPRgdGC0YwsINCc0LjQvdCw0YDQuNGC0LXRgiDQnNC40YDQutGD0YDQsNC00YHRgtGA0LDQvQ!5e0!3m2!1sru!2skg!4v1713446742872!5m2!1sru!2skg"
-                            width="900"
-                            height="400"
-                            style={{ border: 0, borderRadius: '20px' }}
-                            allowFullScreen={true}
-                            loading="lazy"
-                            referrerPolicy="no-referrer-when-downgrade"
-                        />
-                    </div>
-
-                </div>
+  return (
+    <section className={styles.contacts}>
+      <div className="container">
+        <div className={styles.contacts__box}>
+          {contactItems.map((el) => (
+            <div 
+              key={el.id} 
+              className={styles.contacts__item}
+              style={{ padding: el.padding, width: el.width }}
+            >
+              <p className={styles.contacts__title}>{el.title}</p>
+              <p 
+                className={styles.contacts__des} 
+                style={{ 
+                  '--icon-url': `url(${el.icon})`,
+                  '--icon-top': el.iconTop 
+                } as React.CSSProperties}
+              >
+                {el.description}
+              </p>
             </div>
-        </section>
-    )
-}
+          ))}
+          
+          <div className={`${styles.contacts__item} ${styles.contacts__social}`}>
+            <p className={styles.contacts__title}>Свяжитесь с нами:</p>
+            <div className={styles.contacts__imgs}>
+              {socialIcons.map((el, idx) => (
+                <Image 
+                  key={idx}
+                  className={styles.img} 
+                  src={el.src} 
+                  alt={el.alt} 
+                  width={44} 
+                  height={44}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};

@@ -1,9 +1,31 @@
 @font-face {
   font-family: "Geoform";
-  src: url('../../../public/assets/fonts/Geoform/Geoform-Bold.otf');
-  src: url('../../../public/assets/fonts/Geoform/Geoform-Medium.otf');
-  src: url('../../../public/assets/fonts/Geoform/Geoform-Light.otf');
+  src: url('/assets/fonts/Geoform/Geoform-Thin.otf') format("opentype");
+  font-weight: 100;
+  font-style: normal;
 }
+
+@font-face {
+  font-family: "Geoform";
+  src: url('/assets/fonts/Geoform/Geoform-Light.otf') format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Geoform";
+  src: url('/assets/fonts/Geoform/Geoform-Medium.otf') format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Geoform";
+  src: url('/assets/fonts/Geoform/Geoform-Bold.otf') format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
 
 * {
   margin: 0;
@@ -14,6 +36,10 @@
 }
 
 body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   font-family: "Geoform";
   background-color: #FCFAF7;
 }
