@@ -111,6 +111,7 @@ export const ProductListClient = () => {
   return (
     <>
       <div className={styles.header}>
+        <h1 className='adminPageTitle'>Продукты</h1>
         <button
           onClick={() => setIsCreating(true)}
           className={styles.createButton}
@@ -119,34 +120,36 @@ export const ProductListClient = () => {
         </button>
       </div>
 
-      {isCreating && (
-        <ProductForm
-          categories={categories}
-          colors={colors}
-          sizes={sizes}
-          onSubmit={handleCreateProduct}
-          onCancel={() => setIsCreating(false)}
-        />
-      )}
+      <div className={styles.content}>
+        {isCreating && (
+          <ProductForm
+            categories={categories}
+            colors={colors}
+            sizes={sizes}
+            onSubmit={handleCreateProduct}
+            onCancel={() => setIsCreating(false)}
+          />
+        )}
 
-      {editingProduct && (
-        <ProductForm
-          product={editingProduct}
-          categories={categories}
-          colors={colors}
-          sizes={sizes}
-          onSubmit={handleUpdateProduct}
-          onCancel={() => setEditingProduct(null)}
-        />
-      )}
+        {editingProduct && (
+          <ProductForm
+            product={editingProduct}
+            categories={categories}
+            colors={colors}
+            sizes={sizes}
+            onSubmit={handleUpdateProduct}
+            onCancel={() => setEditingProduct(null)}
+          />
+        )}
 
-      {!isCreating && !editingProduct && (
-        <ProductList
-          products={products}
-          onProductDeleted={handleProductDeleted}
-          onEditProduct={(product) => setEditingProduct(product)}
-        />
-      )}
+        {!isCreating && !editingProduct && (
+          <ProductList
+            products={products}
+            onProductDeleted={handleProductDeleted}
+            onEditProduct={(product) => setEditingProduct(product)}
+          />
+        )}
+      </div>
     </>
   );
 };

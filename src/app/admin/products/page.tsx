@@ -4,7 +4,6 @@ import styles from '../AdminPage.module.scss';
 export default function AdminProducts() {
   return (
     <main className={styles.orderPage}>
-      <h1 className='adminPageTitle'>Продукты</h1>
       <ProductListClient />
     </main>
   );
