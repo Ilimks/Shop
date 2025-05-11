@@ -1,5 +1,5 @@
 .header {
-    background-color: #fff9f2;
+    background-color: #1E2235;
     padding: 20px 0;
 
     &__box {
@@ -14,7 +14,7 @@
         }
 
         .header__nav {
-            width: 500px;
+            width: 358px;
 
             .header__nav__ul {
                 display: flex;
@@ -24,23 +24,15 @@
                     cursor: pointer;
                     font-weight: 500;
                     font-size: 16px;
-                    transition: all .3s ease;
-                }
-
-                .header__nav__li:hover {
-                    color: #e95f5f;
+                    color: #fff;
                 }
             }
         }
 
-        .header__box__right {
+        .header__nav__right {
+            width: 325px;
             display: flex;
-            column-gap: 45px;
-
-            .header__box__right__account,
-            .header__box__right__cart {
-                cursor: pointer;
-            }
+            column-gap: 32px;
         }
     }
 }

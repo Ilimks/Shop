@@ -1,13 +1,17 @@
-'use client';
+"use client";
 
-import React, { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
-import { useAppDispatch, useAppSelector } from '@/shared/lib/redux/hooks';
-import { setAdminStatus, setError, setLoading } from '@/store/adminSlice';
-import { verifyAdminToken } from '@/features/auth/lib/verifyAdmin';
-import { logout } from '@/store/authSlice';
-import { Loader } from '@/shared/ui/Loader';
-import { SidebarAdmin } from '@/widgets/sidebarAdmin/SidebarAdmin';
+import React, { useEffect } from "react";
+import { useRouter } from "next/navigation";
+import { useAppDispatch, useAppSelector } from "@/shared/lib/redux/hooks";
+import {
+  setAdminStatus,
+  setError,
+  setLoading,
+} from "@/store/slices/adminSlice";
+import { verifyAdminToken } from "@/features/auth/lib/verifyAdmin";
+import { logout } from "@/store/slices/authSlice";
+import { Loader } from "@/shared/ui/Loader";
+import { SidebarAdmin } from "@/widgets/sidebarAdmin/SidebarAdmin";
 
 interface AdminLayoutProps {
   children: React.ReactNode;
@@ -22,7 +26,7 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
   useEffect(() => {
     const verifyAdmin = async () => {
       if (!token) {
-        router.push('/');
+        router.push("/");
         return;
       }
 
@@ -31,13 +35,13 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
         const isAdmin = await verifyAdminToken(token);
         if (!isAdmin) {
           dispatch(logout());
-          router.push('/');
+          router.push("/");
         }
         dispatch(setAdminStatus(isAdmin));
       } catch (error) {
-        dispatch(setError('Failed to verify admin privileges'));
+        dispatch(setError("Failed to verify admin privileges"));
         dispatch(logout());
-        router.push('/');
+        router.push("/");
       }
     };
 
@@ -52,8 +56,10 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
     return null;
   }
 
-  return <div className='container'>
-  <SidebarAdmin/>
-  {children}
-  </div>;
+  return (
+    <div className="container">
+      <SidebarAdmin />
+      {children}
+    </div>
+  );
 };

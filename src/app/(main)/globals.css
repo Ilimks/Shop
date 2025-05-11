@@ -1,14 +1,31 @@
 @font-face {
-  font-family: "Roboto";
-  src: url('../../../public/assets/fonts/Roboto/Roboto-Regular.ttf');
-  src: url('../../../public/assets/fonts/Roboto/Roboto-Bold.ttf');
+  font-family: "Geoform";
+  src: url('/assets/fonts/Geoform/Geoform-Thin.otf') format("opentype");
+  font-weight: 100;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: "Poppins" sans-serif;
-  src: url('../../../public/assets/fonts/Poppins/Poppins-Regular.ttf');
-  src: url('../../../public/assets/fonts/Poppins/Poppins-Bold.ttf');
+  font-family: "Geoform";
+  src: url('/assets/fonts/Geoform/Geoform-Light.otf') format("opentype");
+  font-weight: 400;
+  font-style: normal;
 }
+
+@font-face {
+  font-family: "Geoform";
+  src: url('/assets/fonts/Geoform/Geoform-Medium.otf') format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Geoform";
+  src: url('/assets/fonts/Geoform/Geoform-Bold.otf') format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
 
 * {
   margin: 0;
@@ -19,11 +36,12 @@
 }
 
 body {
-  font-family: "Roboto";
-}
-
-h1, h2, h3, h4, h5 {
-  font-family: "Poppins" sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Geoform";
+  background-color: #FCFAF7;
 }
 
 a {
@@ -33,11 +51,10 @@ a {
 
 button {
   cursor: pointer;
-  font-family: "Poppins" sans-serif;
 }
 
 .container {
-  max-width: 1280px;
+  max-width: 1240px;
   margin: 0 auto;
 }
 

@@ -1,12 +1,12 @@
-"use client"
-import { useState } from 'react';
-import { useAppDispatch } from '@/shared/lib/redux/hooks';
-import { login } from '@/store/authSlice';
-import { Button } from '@/shared/ui/Button';
-import { Input } from '@/shared/ui/Input';
-import { Typography } from '@/shared/ui/Typography';
-import styles from './LoginForm.module.scss';
-import { useRouter } from 'next/navigation';
+"use client";
+import { useState } from "react";
+import { useAppDispatch } from "@/shared/lib/redux/hooks";
+import { login } from "@/store/slices/authSlice";
+import { Button } from "@/shared/ui/Buttons/ui/Button";
+import { Input } from "@/shared/ui/Input";
+import { Typography } from "@/shared/ui/Typography";
+import styles from "./LoginForm.module.scss";
+import { useRouter } from "next/navigation";
 
 interface LoginFormProps {
   isLoading: boolean;
@@ -14,14 +14,14 @@ interface LoginFormProps {
 
 export const LoginForm = ({ isLoading }: LoginFormProps) => {
   const dispatch = useAppDispatch();
-  const router = useRouter()
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const router = useRouter();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     dispatch(login({ email, password }));
-    router.push('/account')
+    router.push("/account");
   };
 
   return (
@@ -33,7 +33,7 @@ export const LoginForm = ({ isLoading }: LoginFormProps) => {
           label="Email Address"
           name="email"
           value={email}
-          onChange={e => setEmail(e.target.value)}
+          onChange={(e) => setEmail(e.target.value)}
           required
           fullWidth
           error
@@ -47,18 +47,18 @@ export const LoginForm = ({ isLoading }: LoginFormProps) => {
           label="Password"
           name="password"
           value={password}
-          onChange={e => setPassword(e.target.value)}
+          onChange={(e) => setPassword(e.target.value)}
           required
           fullWidth
           error
         />
       </div>
 
-      <Button 
-        type="submit" 
-        variant="show" 
+      <Button
+        type="submit"
+        variant="show"
         disabled={isLoading}
-        text={isLoading ? 'Вход...' : 'Войти'}
+        text={isLoading ? "Вход..." : "Войти"}
       />
     </form>
   );

@@ -1,8 +1,8 @@
 "use client";
-import { useAppDispatch, useAppSelector } from '@/shared/lib/redux/hooks';
-import { fetchUserOrders } from '@/store/orderSlice';
-import { useEffect } from 'react';
-import styles from './PurchaseHistory.module.scss';
+import { useAppDispatch, useAppSelector } from "@/shared/lib/redux/hooks";
+import { fetchUserOrders } from "@/store/slices/orderSlice";
+import { useEffect } from "react";
+import styles from "./PurchaseHistory.module.scss";
 
 interface PurchaseHistoryProps {
   userId: number;
@@ -18,10 +18,8 @@ export const PurchaseHistory = ({ userId }: PurchaseHistoryProps) => {
     }
   }, [userId, dispatch]);
 
-  if (status === 'loading') return <div>Загрузка истории заказов...</div>;
+  if (status === "loading") return <div>Загрузка истории заказов...</div>;
   if (error) return <div>Ошибка: {error}</div>;
-  console.log(orders);
-  
 
   return (
     <div className={styles.purchaseHistory}>
@@ -35,7 +33,7 @@ export const PurchaseHistory = ({ userId }: PurchaseHistoryProps) => {
                 <span>{new Date(order.createdAt).toLocaleDateString()}</span>
               </div>
               <div className={styles.orderDetails}>
-                <p>Статус: {order.sold ? 'Завершен' : 'В обработке'}</p>
+                <p>Статус: {order.sold ? "Завершен" : "В обработке"}</p>
                 <p>Сумма: {order.finalPrice} ₽</p>
                 {order.coupon && <p>Купон: {order.coupon}</p>}
               </div>

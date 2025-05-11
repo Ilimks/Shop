@@ -21,15 +21,12 @@ export const AccountInfo = ({ user }: AccountInfoProps) => {
       <div className={styles.info__box}>
         <div className={styles.info__box__item}>
           <p>Имя:</p>
-          <div className="">
-              <p>{user.name}</p>
-          </div>
+          <p>{user.name}</p>
         </div>
         <div className={styles.info__box__item}>
           <p>Фамилия:</p>
-          <div className="">
-              <p>{user.surname}</p>
-          </div>
+          <div className=""></div>
+          <p>{user.surname}</p>
         </div>
         <div className={styles.info__box__item}>
           <p>Email:</p>
@@ -39,7 +36,6 @@ export const AccountInfo = ({ user }: AccountInfoProps) => {
         </div>
         <div className={styles.info__box__item}>
           <p>Телефон:</p>
-          
           <p>{user.number}</p>
         </div>
         <div className={styles.info__box__item}>

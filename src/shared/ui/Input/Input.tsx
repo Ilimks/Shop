@@ -1,35 +1,52 @@
+import React from 'react'
+import cn from 'classnames'
 import { InputProps } from '@/shared/types/types'
 import styles from './Input.module.scss'
 
 export const Input: React.FC<InputProps> = ({
-  type,
+  type = 'text',
   label,
-  value,
   name,
+  value,
   placeholder,
   error,
   disabled,
-  onChange,
   required,
-  fullWidth
+  fullWidth = false,
+  className,
+  onChange,
+  variant = 'default',
+  inputSize = 'medium',
+  ...rest
 }) => {
+  const inputId = `${name || 'input'}-${label || 'label'}`
+
   return (
-    <div className={`${styles.Input} ${fullWidth ? styles.Input_fullWidth : ''}`}>
-      <label className={styles.Input__label} htmlFor={`${name}-${label}`}>
-        {label}
-        {required && <span className={styles.Input__required}>*</span>}
-      </label>
+    <div className={cn(styles.InputWrapper, fullWidth && styles.fullWidth, className)}>
+      {label && (
+        <label className={styles.label} htmlFor={inputId}>
+          {label}
+          {required && <span className={styles.required}>*</span>}
+        </label>
+      )}
       <input
+        id={inputId}
         type={type}
-        id={`${name}-${label}`}
-        value={value}
         name={name}
+        value={value}
         placeholder={placeholder}
         onChange={onChange}
         disabled={disabled}
         required={required}
-        className={`${styles.Input__field} ${error ? styles.Input__field_error : ''}`}
+        className={cn(
+          styles.input,
+          styles[variant],
+          styles[inputSize],
+          error && styles.error
+        )}
+        {...rest}
       />
+      {error && <span className={styles.errorText}>{error}</span>}
     </div>
   )
 }

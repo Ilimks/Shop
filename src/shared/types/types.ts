@@ -1,5 +1,3 @@
-import { ChangeEvent } from "react";
-
 export interface ProductCardProps {
     title: string;
     price: number;
@@ -16,17 +14,13 @@ export interface ButtonProps {
     type?: 'button' | 'submit' | 'reset';
 }
 
-export interface InputProps {
-    type: 'tel' | 'text' | 'email' | 'password' | 'address'
-    label: string
-    value: string | number
-    name: string
-    placeholder: string
-    error: boolean
-    disabled?: boolean
-    onChange: (e: ChangeEvent<HTMLInputElement>) => void
-    required?: boolean; 
-    fullWidth?: boolean;
+export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+    label?: string
+    error?: string
+    fullWidth?: boolean
+    className?: string
+    variant?: 'default' | 'headerSearch' | 'auth'
+    inputSize?: 'small' | 'headerSearchSize' | 'large' // ✅ новое имя
 }
 
 export interface PaginationProps<T> {
