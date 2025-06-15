@@ -55,6 +55,7 @@ button {
 
 .container {
   max-width: 1240px;
+  min-width: 1000px;
   margin: 0 auto;
 }
 
