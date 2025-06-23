@@ -11,8 +11,9 @@ interface RangeProps {
   onChange: (min: number, max: number) => void;
 };
 
-export const Range = ({ min, max, onChange }: RangeProps) => {
+export const Range = ({min, max, onChange }: RangeProps) => {
   const [value, setValue] = useState<[number, number]>([min, max]);
+
 
   useEffect(() => {
     setValue([min, max]);
@@ -31,32 +32,33 @@ export const Range = ({ min, max, onChange }: RangeProps) => {
         onChange={handleChange}
         min={min}
         max={max}
-        disableSwap
-        valueLabelDisplay="on"
-        getAriaLabel={() => 'Цена'}
-        valueLabelFormat={(v) => `${v} с`}
+        // disableSwap
+        // valueLabelDisplay="on"
+        // getAriaLabel={() => 'Цена'}
+        // valueLabelFormat={(v) => `${v} с`}
         sx={{
           color: 'black',
           height: 6,
           '& .MuiSlider-thumb': {
-            height: 24,
-            width: 24,
-            backgroundColor: '#B88E2F',
+            height: 16,
+            width: 16,
+            backgroundColor: 'white',
+            border: "1px solid #1E2235",
             '&:hover, &.Mui-focusVisible, &.Mui-active': {
               boxShadow: 'none',
             },
             '& .MuiSlider-valueLabel': {
               background: 'transparent',
-              color: '#B88E2F',
+              color: '#1E2235',
               fontWeight: 'bold',
               fontSize: 16,
-              top: 25,
+              top: [25],
               transform: 'none !important',
             },
           },
           '& .MuiSlider-track': {
             border: 'none',
-            backgroundColor: '#B88E2F',
+            backgroundColor: '#1E2235',
           },
           '& .MuiSlider-rail': {
             opacity: 0.2,

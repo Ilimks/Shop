@@ -1,36 +1,56 @@
-'use client'
-import styles from './Size.module.scss';
+'use client';
+
+import style from './Size.module.scss';
 
 interface SizeFilterProps {
   selectedSizes: string[];
-  setSelectedSizes: (sizes: string[]) => void;
+  onSelect: (sizes: string[]) => void;
+  availableSizes: string[];
 }
 
-const availableSizes = ['XS', 'S', 'M', 'L', 'XL', '2XL'];
 
-export const Size: React.FC<SizeFilterProps> = ({ selectedSizes, setSelectedSizes }) => {
+export const Size: React.FC<SizeFilterProps> = ({ availableSizes, selectedSizes, onSelect }) => {
   const handleClick = (size: string) => {
     if (selectedSizes.includes(size)) {
-      setSelectedSizes(selectedSizes.filter(s => s !== size));
+      onSelect(selectedSizes.filter(s => s !== size));
     } else {
-      setSelectedSizes([...selectedSizes, size]);
+      onSelect([...selectedSizes, size]);
     }
   };
+  const handleClickAll = () => {
 
+    if (selectedSizes.length === availableSizes.length) {
+      onSelect([]);
+    } else {
+      onSelect(availableSizes);
+    }
+  }
+ 
+ 
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.sizes}>
+      <div className={style.filter}>
+        <div className={style.filterElement}>
+          <input className={style.filterElement__input} checked={selectedSizes.length === availableSizes.length}
+            id={`sizeInput`} type="checkbox"
+            onChange={handleClickAll}/>
+          <label htmlFor={`sizeInput`}
+            className={style.filterElement__label} >
+            Все
+          </label>
+        </div>
         {availableSizes.map(size => (
-          <div
-            key={size}
-            className={`${styles.size} ${selectedSizes.includes(size) ? styles.active : ''}`}
-            onClick={() => handleClick(size)}
-          >
-            {size}
+          <div className={style.filterElement} key={size}>
+            <input className={style.filterElement__input} checked={selectedSizes.includes(size)}
+             id={`sizeInput${size}`} type="checkbox"
+              onChange={() => handleClick(size)}/>
+            <label
+              htmlFor={`sizeInput${size}`}
+              className={style.filterElement__label} >
+              {size}
+            </label>
           </div>
         ))}
       </div>
-    </div>
   );
 };
 
