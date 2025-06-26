@@ -14,8 +14,6 @@ export const AccountSection: React.FC = () => {
   const user = useAppSelector((state) => state.auth.user);
   const status = useAppSelector((state) => state.auth.status);
 
-  // console.log('TestAuth: текущее состояние', { user, status });
-
   const handleLogout = () => {
     dispatch(logout());
     router.push("/");

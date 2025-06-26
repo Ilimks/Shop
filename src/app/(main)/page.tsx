@@ -1,20 +1,25 @@
 import { Loader } from "@/shared/ui/Loader";
 import { AboutSection } from "@/features/home/ui/AboutSection/AboutSection";
 import { HeroSection } from "@/features/home/ui/HeroSection/HeroSection";
-import { PajamasSection } from "@/features/home/ui/PajamasSection/PajamasSection";
-import { RobesSection } from "@/features/home/ui/RobesSection/RobesSection";
-import { SuitsSection } from "@/features/home/ui/SuitsSection/SuitsSection";
 import { CategorySection } from "@/features/home/ui/СategorySection/СategorySection";
+import { NewSection } from "@/features/home/ui/NewSection/NewSection";
+import { BestsellersSection } from "@/features/home/ui/BestsellersSection/BestsellersSection";
+import { getNewProducts } from "@/features/home/api/newProducts";
+import { InputSection } from "@/features/home/ui/InputSection/InputSection";
 
-export default function Home() {
+export const revalidate = 3600;
+
+export default async function Home() {
+  const products = await getNewProducts();
+
   return (
       <main>
         <HeroSection/>
-        {/* <CategorySection/> */}
-        {/* <PajamasSection/> */}
-        {/* <RobesSection/> */}
-        {/* <SuitsSection/> */}
-        {/* <AboutSection/> */}
+        <InputSection/>
+        <NewSection initialProducts={products} />
+        <CategorySection/>
+        <BestsellersSection initialProducts={products}/>
+        <AboutSection/>
       </main>
   );
 }

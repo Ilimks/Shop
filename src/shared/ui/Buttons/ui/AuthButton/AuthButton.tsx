@@ -1,36 +1,41 @@
 "use client";
 import { useAppSelector, useAppDispatch } from "@/shared/lib/redux/hooks";
 import { setAuthModalOpen } from "@/store/slices/authSlice";
-import Image from "next/image";
-import { useRouter } from "next/navigation";
 import styles from "./AuthButton.module.scss";
+import React from "react";
+import Link from "next/link";
 
-export const AuthButton = () => {
+const _AuthButton = () => {
   const dispatch = useAppDispatch();
-  const router = useRouter();
-  const { user } = useAppSelector((state) => state.auth);
+  const userName = useAppSelector((state) => state.auth.user?.name);
 
-  const handleAccountClick = () => {
-    if (user) {
-      router.push("/account");
-    } else {
-      dispatch(setAuthModalOpen(true));
-    }
-  };
+  if (userName) {
+    return (
+      <Link href="/account" className={styles.authButton}>
+        <img
+          className={styles.account__img}
+          src="/assets/icons/Account.svg"
+          alt="Иконка Аккаунт"
+          width={24}
+          height={24}
+        />
+        <span className={styles.name}>{userName}</span>
+      </Link>
+    );
+  }
 
   return (
-    <div className={styles.authButton}>
-      <Image
-        onClick={handleAccountClick}
+    <div className={styles.authButton} onClick={() => dispatch(setAuthModalOpen(true))}>
+      <img
         className={styles.account__img}
         src="/assets/icons/Account.svg"
         alt="Иконка Аккаунт"
         width={24}
         height={24}
       />
-      <span className={styles.name}>
-        {user ? user.name : 'Профиль'}
-      </span>
+      <span className={styles.name}>Профиль</span>
     </div>
   );
 };
+
+export const AuthButton = React.memo(_AuthButton);

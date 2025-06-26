@@ -1,29 +1,19 @@
+import { CategorySwiper } from '@/widgets/categorySwiper/CategorySwiper';
 import styles from './СategorySection.module.scss';
-import Image from "next/image";
+import mobile from './СategorySectionMobile.module.scss';
 
 export const CategorySection: React.FC = () => {
-
-    const categoryCard = [
-        {img: "/assets/images/images.jpg", title: "Пижамы"},
-        {img: "/assets/images/halat.jpg", title: "Халаты"},
-        {img: "/assets/images/2.webp", title: "Костюмы"},
-    ]
-    return (
-        <section className={styles.category}>
-            <div className="container">
-                <div className={styles.category__box}>
-                    <h3 className={styles.category__box__name}>Категории</h3>
-                    <p className={styles.category__box__text}>Уютные пижамы, халаты и домашние костюмы для комфорта каждый день.</p>
-                    <div className={styles.category__box__items}>
-                        {categoryCard.map((el,idx) =>(
-                            <div key={idx} className={styles.category__box__item}>
-                                <Image className={styles.category__box__item__img} src={el.img} alt="" width={380} height={480} />
-                                <h4 className={styles.category__box__item__name}>{el.title}</h4>
-                            </div>
-                        ))}
-                    </div>
+  return (
+    <section className={`${styles.category} ${mobile.category}`}>
+        <div className={`container ${mobile.container}`}>
+            <div className={`${styles.category__box} ${mobile.category__box}`}>
+                <p className={`${styles.category__text} ${mobile.category__text}`}>За всё время</p>
+                <h3 className={`${styles.category__title} ${mobile.category__title}`}>Поиск по категориям</h3>
+                <div className={`${styles.category__items} ${mobile.category__items}`}>
+                    <CategorySwiper />
                 </div>
             </div>
-        </section>
-    )
-}
+        </div>
+    </section>
+  );
+};

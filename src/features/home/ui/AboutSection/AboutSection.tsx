@@ -1,12 +1,13 @@
+import { AboutSwiper } from '@/widgets/aboutSwiper/AboutSwiper'
 import styles from './AboutSection.module.scss'
+import mobile from './AboutSectionMobile.module.scss'
 
 export const AboutSection: React.FC = () => {
     return (
-        <section className={styles.about}>
+        <section className={`${styles.about} ${mobile.about}`}>
             <div className="container">
-                <div className={styles.about__box}>
-                    <h3 className={styles.about__box__name}>Интернет-магазин  «Belle Nuit»</h3>
-                    <p className={styles.about__box__text}>Мягкие и приятные к телу ткани подарят вам ощущение уюта после насыщенного дня. Пижамы идеально подойдут для спокойного сна, костюмы — для расслабленного утра или уютного вечера дома, а халаты станут незаменимыми после душа или просто в моменты, когда хочется окутать себя теплом. Мы предлагаем разнообразие фасонов, расцветок и материалов: от лёгкого хлопка до нежного велюра. Каждая модель создана с заботой о вашем комфорте и стиле — потому что даже дома вы заслуживаете выглядеть красиво и чувствовать себя отлично. Выбирайте одежду для сна и отдыха, которая подойдёт именно вам — для тёплых вечеров, уютных выходных и сладких снов.</p>
+                <div className={`${styles.about__box} ${mobile.about__box}`}>
+                    <AboutSwiper/>
                 </div>
             </div>
         </section>

@@ -1,118 +1,103 @@
-"use client"
-import { useRouter } from 'next/navigation';
-import styles from './Footer.module.scss'
+import styles from './Footer.module.scss';
+import mobile from './FooterMobile.module.scss';
 import Image from 'next/image';
+import Link from 'next/link';
+import { FooterAccount } from './ui/FooterAccount';
 
 export const Footer: React.FC = () => {
-    const router = useRouter();
 
-    const contactItems = [
-        { text: 'Ортосайский рынок, 2 ряд, 5 контейнер', icon: 'FooterLocation', onClick: () => router.push('/account') },
-        { text: 'ilimk9731@gmail.com', icon: 'FooterEmail', onClick: () => router.push('/') },
-        { text: '+996 555 444 123', icon: 'FooterPhone', onClick: () => router.push('/cart') }
-    ];
+  const contactItems = [
+    { text: 'Ортосайский рынок, 2 ряд, 5 контейнер', icon: 'FooterLocation', href: '#' },
+    { text: 'ilimk9731@gmail.com', icon: 'FooterEmail', href: 'mailto:ilimk9731@gmail.com' },
+    { text: '+996 706 030 725', icon: 'FooterPhone', href: 'tel:+996706030725'}
+  ];
 
-    const accountItems = [
-        { text: 'Войти в аккаунт', onClick: () => router.push('/account') },
-        { text: 'Избранное', onClick: () => router.push('/') },
-        { text: 'Корзина', onClick: () => router.push('/cart') }
-    ];
+  const navItems = [
+    { text: 'Главная', href: '/' },
+    { text: 'Каталог', href: '/' },
+    { text: 'Пижама', href: '/pajamas' },
+    { text: 'Костюм', href: '/suits' },
+    { text: 'Халат', href: '/robes' }
+  ];
 
-    const navItems = [
-        { text: 'Главная', onClick: () => router.push('/') },
-        { text: 'Каталог', onClick: () => router.push('/') },
-        { text: 'Пижама', onClick: () => router.push('/pajamas') },
-        { text: 'Костюм', onClick: () => router.push('/suits') },
-        { text: 'Халат', onClick: () => router.push('/robes') }
-    ];
+  const socialIcons = [
+    { href: 'https://t.me/ilimk4', src: '/assets/icons/Telega.svg', alt: 'Telegram' },
+    { href: 'https://instagram.com/ilimk4', src: '/assets/icons/Insta.svg', alt: 'Instagram' },
+    { href: 'https://wa.me/996706030725', src: '/assets/icons/WhatsApp.svg', alt: 'WhatsApp' }
+  ];
 
-    const socialIcons = [
-        { src: '/assets/icons/Telega.svg', alt: 'Иконка Telega', className: styles.telega },
-        { src: '/assets/icons/Insta.svg', alt: 'Иконка Insta', className: styles.insta },
-        { src: '/assets/icons/WhatsApp.svg', alt: 'Иконка WhatsApp', className: styles.whatsApp }
-    ];
-
-    return (
-        <footer className={styles.footer}>
-            <div className="container">
-                <div className={styles.footer__box}>
-                    <div className={styles.footer__left}>
-                        <Image 
-                            className={styles.footer__left__logo} 
-                            src="/assets/icons/FooterLogo.svg" 
-                            alt="Иконка FooterLogo" 
-                            width={177} 
-                            height={116} 
-                        />
-                        <div className={styles.line}></div>
-                        <p className={styles.text}>Belle Nuit — пижамы для снов, которые хочется повторить</p>
-                        <div className={styles.footer__left__social}>
-                            {socialIcons.map((icon, index) => (
-                                <Image 
-                                    key={index}
-                                    className={icon.className} 
-                                    src={icon.src} 
-                                    alt={icon.alt} 
-                                    width={28} 
-                                    height={28} 
-                                />
-                            ))}
-                        </div>
-                    </div>
-
-                    <div className={styles.footer__center1}>
-                        <h3 className={styles.title}>Контакты</h3>
-                        <nav className={styles.footer__nav}>
-                            <ul className={styles.nav__ul}>
-                                {contactItems.map((item, index) => (
-                                    <li 
-                                        key={index}
-                                        onClick={item.onClick}
-                                        className={styles[`nav__ul__li${index + 1}`]}
-                                    >
-                                        {item.text}
-                                    </li>
-                                ))}
-                            </ul>
-                        </nav>
-                    </div>
-
-                    <div className={styles.footer__center2}>
-                        <h3 className={styles.title}>Аккаунт</h3>
-                        <nav className={styles.footer__nav}>
-                            <ul className={styles.nav__ul}>
-                                {accountItems.map((item, index) => (
-                                    <li 
-                                        key={index}
-                                        onClick={item.onClick}
-                                        className={styles.nav__ul__li}
-                                    >
-                                        {item.text}
-                                    </li>
-                                ))}
-                            </ul>
-                        </nav>
-                    </div>
-
-                    <div className={styles.footer__right}>
-                        <h3 className={styles.title}>Навигация</h3>
-                        <nav className={styles.footer__nav}>
-                            <ul className={styles.nav__ul}>
-                                {navItems.map((item, index) => (
-                                    <li 
-                                        key={index}
-                                        onClick={item.onClick}
-                                        className={styles.nav__ul__li}
-                                    >
-                                        {item.text}
-                                    </li>
-                                ))}
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-                <p className={styles.footer__rights}>© 2025 Все права</p>
+  return (
+    <footer className={`${styles.footer} ${mobile.footer}`}>
+      <div className="container">
+        <div className={`${styles.footer__box} ${mobile.footer__box}`}>
+          <div className={`${styles.footer__left} ${mobile.footer__left}`}>
+            <Image
+              src="/assets/icons/FooterLogo.svg"
+              alt="Иконка FooterLogo"
+              width={177}
+              height={116}
+              priority
+            />
+            <div className={`${styles.line} ${mobile.line}`}></div>
+            <p className={`${styles.text} ${mobile.text}`}>Belle Nuit — пижамы для снов, которые хочется повторить</p>
+            <div
+              className={`${styles.footer__left__social} ${mobile.footer__left__social}`}
+            >
+              {socialIcons.map((icon, index) => (
+                <a
+                  key={index}
+                  href={icon.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    className={styles.icons}
+                    src={icon.src}
+                    alt={icon.alt}
+                    width={28}
+                    height={28}
+                  />
+                </a>
+              ))}
             </div>
-        </footer>
-    )
+          </div>
+
+          <div className={`${styles.footer__center1} ${mobile.footer__center1}`}>
+            <h3 className={`${styles.title} ${mobile.title}`}>Контакты</h3>
+            <nav className={`${styles.footer__nav} ${mobile.footer__nav}`}>
+              <ul className={`${styles.nav__ul} ${mobile.nav__ul}`}>
+                {contactItems.map((item, index) => (
+                  <li
+                    key={index}
+                    className={`${styles[`nav__ul__li${index + 1}`]} ${mobile[`nav__ul__li${index + 1}`]}`}
+                  >
+                    <a href={item.href}>{item.text}</a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </div>
+
+          <FooterAccount />
+
+          <div className={`${styles.footer__right} ${mobile.footer__right}`}>
+            <h3 className={`${styles.title} ${mobile.title}`}>Навигация</h3>
+            <nav className={`${styles.footer__nav} ${mobile.footer__nav}`}>
+              <ul className={`${styles.nav__ul} ${mobile.nav__ul}`}>
+                {navItems.map((item, index) => (
+                  <li
+                    key={index}
+                    className={`${styles.nav__ul__li} ${mobile.nav__ul__li}`}
+                  >
+                    <Link href={item.href}>{item.text}</Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <p className={`${styles.footer__rights} ${mobile.footer__rights}`}>© 2025 Все права защищены</p>
+      </div>
+    </footer>
+  );
 };

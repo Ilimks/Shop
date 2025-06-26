@@ -1,64 +1,72 @@
 export const mockProducts = [
     {
       id: '1',
-      title: 'Пижама',
-      price: 999,
+      title: 'Пижама со штанами шелковая домашняя',
+      price: 1000,
+      oldPrice: 1200,
       image: '/assets/images/photo.jpg',
       description: 'Мощный новый iPhone.',
       maker: 'Кыргызстан'
     },
     {
       id: '2',
-      title: 'Пижама',
+      title: 'Пижама со штанами шелковая домашняя',
       price: 899,
+      oldPrice: 1200,
       image: '/assets/images/photo.jpg',
       description: 'Флагман от Samsung.',
       maker: 'Кыргызстан'
     },
     {
       id: '3',
-      title: 'Пижама',
+      title: 'Пижама со штанами шелковая домашняя',
       price: 999,
+      oldPrice: 1200,
       image: '/assets/images/photo.jpg',
       description: 'Мощный новый iPhone.',
       maker: 'Кыргызстан'
     },
     {
       id: '4',
-      title: 'Пижама',
+      title: 'Пижама со штанами шелковая домашняя',
       price: 899,
+      oldPrice: 1200,
       image: '/assets/images/photo.jpg',
       description: 'Флагман от Samsung.',
       maker: 'Кыргызстан'
     },
     {
       id: '5',
-      title: 'Пижама',
+      title: 'Пижама со штанами шелковая домашняя',
       price: 999,
+      oldPrice: 1200,
       image: '/assets/images/photo.jpg',
       description: 'Мощный новый iPhone.',
       maker: 'Кыргызстан'
     },
     {
       id: '6',
-      title: 'Пижама',
+      title: 'Пижама со штанами шелковая домашняя',
       price: 899,
+      oldPrice: 1200,
       image: '/assets/images/photo.jpg',
       description: 'Флагман от Samsung.',
       maker: 'Кыргызстан'
     },
     {
       id: '7',
-      title: 'Пижама',
+      title: 'Пижама со штанами шелковая домашняя',
       price: 999,
+      oldPrice: 1200,
       image: '/assets/images/photo.jpg',
       description: 'Мощный новый iPhone.',
       maker: 'Кыргызстан'
     },
     {
       id: '8',
-      title: 'Пижама',
+      title: 'Пижама со штанами шелковая домашняя',
       price: 899,
+      oldPrice: 1200,
       image: '/assets/images/photo.jpg',
       description: 'Флагман от Samsung.',
       maker: 'Кыргызстан'
@@ -68,6 +76,7 @@ export const mockProducts = [
       id: '9',
       title: 'Халат',
       price: 999,
+      oldPrice: 1200,
       image: '/assets/images/1.webp',
       description: 'Мощный новый iPhone.',
       maker: 'Кыргызстан'
@@ -76,6 +85,7 @@ export const mockProducts = [
       id: '10',
       title: 'Халат',
       price: 899,
+      oldPrice: 1200,
       image: '/assets/images/1.webp',
       description: 'Флагман от Samsung.',
       maker: 'Кыргызстан'
@@ -84,6 +94,7 @@ export const mockProducts = [
       id: '11',
       title: 'Халат',
       price: 999,
+      oldPrice: 1200,
       image: '/assets/images/1.webp',
       description: 'Мощный новый iPhone.',
       maker: 'Кыргызстан'
@@ -92,6 +103,7 @@ export const mockProducts = [
       id: '12',
       title: 'Халат',
       price: 899,
+      oldPrice: 1200,
       image: '/assets/images/1.webp',
       description: 'Флагман от Samsung.',
       maker: 'Кыргызстан'
@@ -100,6 +112,7 @@ export const mockProducts = [
       id: '13',
       title: 'Халат',
       price: 999,
+      oldPrice: 1200,
       image: '/assets/images/1.webp',
       description: 'Мощный новый iPhone.',
       maker: 'Кыргызстан'
@@ -108,6 +121,7 @@ export const mockProducts = [
       id: '14',
       title: 'Халат',
       price: 899,
+      oldPrice: 1200,
       image: '/assets/images/1.webp',
       description: 'Флагман от Samsung.',
       maker: 'Кыргызстан'
@@ -116,6 +130,7 @@ export const mockProducts = [
       id: '15',
       title: 'Халат',
       price: 999,
+      oldPrice: 1200,
       image: '/assets/images/1.webp',
       description: 'Мощный новый iPhone.',
       maker: 'Кыргызстан'
@@ -124,6 +139,7 @@ export const mockProducts = [
       id: '16',
       title: 'Халат',
       price: 899,
+      oldPrice: 1200,
       image: '/assets/images/1.webp',
       description: 'Флагман от Samsung.',
       maker: 'Кыргызстан'
@@ -132,6 +148,7 @@ export const mockProducts = [
       id: '17',
       title: 'Костюмы',
       price: 999,
+      oldPrice: 1200,
       image: '/assets/images/jk.webp',
       description: 'Мощный новый iPhone.',
       maker: 'Кыргызстан'
@@ -140,6 +157,7 @@ export const mockProducts = [
       id: '18',
       title: 'Костюмы',
       price: 899,
+      oldPrice: 1200,
       image: '/assets/images/jk.webp',
       description: 'Флагман от Samsung.',
       maker: 'Кыргызстан'
@@ -148,6 +166,7 @@ export const mockProducts = [
       id: '19',
       title: 'Костюмы',
       price: 999,
+      oldPrice: 1200,
       image: '/assets/images/jk.webp',
       description: 'Мощный новый iPhone.',
       maker: 'Кыргызстан'
@@ -156,6 +175,7 @@ export const mockProducts = [
       id: '20',
       title: 'Костюмы',
       price: 899,
+      oldPrice: 1200,
       image: '/assets/images/jk.webp',
       description: 'Флагман от Samsung.',
       maker: 'Кыргызстан'
@@ -164,6 +184,7 @@ export const mockProducts = [
       id: '21',
       title: 'Костюмы',
       price: 999,
+      oldPrice: 1200,
       image: '/assets/images/jk.webp',
       description: 'Мощный новый iPhone.',
       maker: 'Кыргызстан'
@@ -172,6 +193,7 @@ export const mockProducts = [
       id: '22',
       title: 'Костюмы',
       price: 899,
+      oldPrice: 1200,
       image: '/assets/images/jk.webp',
       description: 'Флагман от Samsung.',
       maker: 'Кыргызстан'
@@ -180,6 +202,7 @@ export const mockProducts = [
       id: '23',
       title: 'Костюмы',
       price: 999,
+      oldPrice: 1200,
       image: '/assets/images/jk.webp',
       description: 'Мощный новый iPhone.',
       maker: 'Кыргызстан'
@@ -188,6 +211,7 @@ export const mockProducts = [
       id: '24',
       title: 'Костюмы',
       price: 899,
+      oldPrice: 1200,
       image: '/assets/images/jk.webp',
       description: 'Флагман от Samsung.',
       maker: 'Кыргызстан'

@@ -1,15 +1,10 @@
 "use client";
 import { useAppSelector, useAppDispatch } from "@/shared/lib/redux/hooks";
-import {
-  setAuthModalOpen,
-  setAuthMode,
-  resetAuthState,
-} from "@/store/slices/authSlice";
+import { setAuthModalOpen, setAuthMode } from "@/store/slices/authSlice";
 import { LoginForm } from "./LoginForm";
 import { RegisterForm } from "./RegisterForm";
 import { Modal } from "@/shared/ui/Modal";
-import { Typography } from "@/shared/ui/Typography";
-import { Button } from "@/shared/ui/Buttons/ui/Button";
+import cn from "classnames";
 import styles from "./AuthModal.module.scss";
 
 export const AuthModal = () => {
@@ -20,11 +15,10 @@ export const AuthModal = () => {
 
   const handleClose = () => {
     dispatch(setAuthModalOpen(false));
-    dispatch(resetAuthState());
   };
 
-  const switchMode = () => {
-    dispatch(setAuthMode(authMode === "login" ? "register" : "login"));
+  const switchMode = (mode: "login" | "register") => {
+    dispatch(setAuthMode(mode));
   };
 
   if (!isAuthModalOpen) return null;
@@ -32,34 +26,31 @@ export const AuthModal = () => {
   return (
     <Modal isOpen={isAuthModalOpen} onClose={handleClose}>
       <div className={styles.modalContent}>
-        <Typography variant="h3" className={styles.title}>
-          {authMode === "login" ? "Войти" : "Зарегистрироваться"}
-        </Typography>
 
-        {error && <div className={styles.errorMessage}>{error}</div>}
-
-        {authMode === "login" ? (
-          <LoginForm isLoading={status === "loading"} />
-        ) : (
-          <RegisterForm isLoading={status === "loading"} />
-        )}
-
-        <div className={styles.switchModeWrapper}>
-          <button
-            type="button"
-            className={styles.switchModeButton}
-            onClick={switchMode}
-            aria-label={
-              authMode === "login"
-                ? "Перейти к регистрации"
-                : "Перейти к входу в аккаунт"
-            }
-          >
-            {authMode === "login"
-              ? "Зарегистрироваться"
-              : "У вас уже есть аккаунт? Войти"}
-          </button>
-        </div>
+          <div className={styles.tabs}>
+              <button
+                className={cn(styles.tab, authMode === "login" && styles.activeTab)}
+                onClick={() => switchMode("login")}
+              >
+                Вход
+              </button>
+              <button
+                className={cn(styles.tab, authMode === "register" && styles.activeTab)}
+                onClick={() => switchMode("register")}
+              >
+                Регистрация
+              </button>
+          </div>
+  
+          <div className={styles.tabs__to}>
+              {error && <div className={styles.errorMessage}>{error}</div>}
+              
+              {authMode === "login" ? (
+                <LoginForm isLoading={status === "loading"} />
+              ) : (
+                <RegisterForm isLoading={status === "loading"} />
+              )}
+          </div>
       </div>
     </Modal>
   );

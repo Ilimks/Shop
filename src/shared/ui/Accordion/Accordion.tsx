@@ -1,4 +1,3 @@
-// AccordionSection.tsx
 "use client";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";

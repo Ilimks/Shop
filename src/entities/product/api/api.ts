@@ -5,8 +5,6 @@ export async function getAllProducts(): Promise<Product[]> {
     cache: "no-store",
   });
 
-  if (!res.ok) throw new Error("Failed to fetch products");
-
   return res.json();
 }
 
@@ -17,8 +15,6 @@ export async function getProductsByCategoryId(
     `${process.env.NEXT_PUBLIC_API_URL}/category/${categoryId}`,
     { cache: "no-store" }
   );
-
-  if (!res.ok) throw new Error("Failed to fetch products by category");
 
   return res.json();
 }

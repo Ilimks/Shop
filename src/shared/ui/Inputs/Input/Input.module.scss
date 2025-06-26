@@ -1,0 +1,126 @@
+.InputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+
+.label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #808080;
+  padding-bottom: 5px;
+}
+
+.input {
+  padding: 12px 15px;
+  font-size: 14px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  transition: border-color 0.2s ease;
+  outline: none;
+  position: relative;
+
+  &:focus {
+    border-color: #1e2235;
+  }
+
+  &:disabled {
+    background-color: #f5f5f5;
+    cursor: not-allowed;
+  }
+
+  &::placeholder {
+    color: #000;
+  }
+}
+
+
+
+
+
+/* Variants */
+
+.headerSearch {
+  background-color: white;
+  border: 1px solid #808080;
+}
+
+.headerSearch2 {
+  border: 1px solid #0024cd;
+}
+
+
+
+/* Sizes */
+
+.headerSearchSize {
+  width: 331px;
+  height: 49px;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 1300px) {
+  .headerSearchSize {
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .headerSearchSize {
+    width: 200px;
+  }
+}
+
+.headerSearchSize2 {
+  font-weight: 400;
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 16px;
+  width: 380px;
+  height: 57px;
+}
+
+.headerSearchSize2::placeholder {
+  color: #0024cd;
+}
+
+@media screen and (max-width: 440px) {
+  .headerSearchSize2 {
+    width: 340px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .headerSearchSize2 {
+    width: 290px;
+  }
+}
+
+.registerSize {
+  width: 300px;
+  height: 49px;   
+}
+
+@media screen and (max-width: 720px) {
+  .registerSize {
+    width: 100%;  
+  }
+}
+
+
+
+
+
+/* Errors */
+
+.error {
+  border-color: #610103;
+}
+
+.errorText {
+  font-weight: 700;
+  font-size: 12px;
+  color: #610103;
+}

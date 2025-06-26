@@ -1,0 +1,17 @@
+@media (max-width: 1200px) {
+    .nav {
+        width: 300px; 
+    }
+}
+
+@media (max-width: 1100px) {
+    .nav {
+        width: 280px; 
+    }
+}
+
+@media (max-width: 1000px) {
+    .nav {
+        display: none;
+    }
+}

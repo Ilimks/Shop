@@ -3,24 +3,25 @@ export interface ProductCardProps {
     price: number;
     image: string;
     maker: string;
+    oldPrice: number;
 };
 
 export interface ButtonProps {
     text: string | boolean;
     onClick?: () => void;
-    variant?: 'show' | 'filter' | 'third';
-    size?: 'showSize' | 'filterSize' | 'large';
+    variant?: 'card' | 'show' | 'modal';
+    size?: 'cardSize' | 'showSize' | 'modalSize';
     disabled?: boolean;
     type?: 'button' | 'submit' | 'reset';
 }
 
 export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
-    label?: string
-    error?: string
-    fullWidth?: boolean
-    className?: string
-    variant?: 'default' | 'headerSearch' | 'auth'
-    inputSize?: 'small' | 'headerSearchSize' | 'large' // ✅ новое имя
+    label?: string;
+    error?: string;
+    fullWidth?: boolean;
+    className?: string;
+    variant?:'headerSearch' | 'login' | 'register' | 'headerSearch2';
+    inputSize?: 'headerSearchSize' | 'loginSize' | 'registerSize' | 'headerSearchSize2';
 }
 
 export interface PaginationProps<T> {
@@ -33,3 +34,28 @@ export interface ModalProps {
   onClose: () => void;
   children: React.ReactNode;
 }
+
+export interface CheckboxProps {
+  label: string;
+  checked: boolean;
+  onChange: (checked: boolean) => void;
+  disabled?: boolean;
+  name?: string;
+  size?: "modal" | "medium" | "large";
+  variant?: "modalChecked" | "secondary";
+}
+
+export interface BurgerProps {
+  isOpen: boolean;
+  onToggle: () => void;
+  onClose: () => void;
+}
+
+export interface NavigationBurgerProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+export interface SearchWithHistoryProps {
+  inputProps?: Partial<InputProps>;
+};

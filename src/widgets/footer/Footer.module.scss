@@ -26,13 +26,10 @@
         padding-bottom: 15px;
       }
   
-      &__social img {
+      &__social {
         cursor: pointer;
-        margin-right: 19px;
-        
-        &:last-child {
-          margin-right: 0;
-        }
+        display: flex;
+        column-gap: 19px;
       }
     }
   

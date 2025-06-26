@@ -1,0 +1,15 @@
+.inputSection {
+    display: none;
+}
+
+@media screen and (max-width: 1000px) {
+    .inputSection {
+        display: flex;
+        padding: 44px 0 22px;
+    
+        .inputSection__box {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
