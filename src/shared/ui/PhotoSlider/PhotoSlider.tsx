@@ -2,43 +2,39 @@
 import React, { useState } from 'react'
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
+import { FreeMode, Thumbs } from 'swiper/modules';
 import type { Swiper as SwiperType } from 'swiper/types';
+import { PhotoSliderProps } from '@/shared/types/types';
 
 import styles from './PhotoSlider.module.scss';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import Image from 'next/image';
 
 
-export function PhotoSlider() {
+
+export const PhotoSlider: React.FC<PhotoSliderProps> = ({ images }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
   return (
     <>
       <div className={styles.sliderWrap}>
         <Swiper
-          style={{ maxHeight: 670 }}
+          style={{transform: 'translateY(20%)'}}
           onSwiper={setThumbsSwiper}
           direction={'vertical'}
-          spaceBetween={10}
-          slidesPerView={4}
+          spaceBetween={53}
+          slidesPerView={3}
           freeMode={true}
           watchSlidesProgress={true}
           modules={[FreeMode, Thumbs]}
           className={styles.slider1}
         >
-          <SwiperSlide>
-            slide 1
-          </SwiperSlide>
-          <SwiperSlide>
-            slide 2
-          </SwiperSlide>
-          <SwiperSlide>
-            slide 3
-          </SwiperSlide>
-          <SwiperSlide>
-            slide 4
-          </SwiperSlide>
+          {images.map((img) => (
+            <SwiperSlide key={img}>
+              <Image width={120} height={120} src={img} alt={img} />
+            </SwiperSlide>
+          ))}
         </Swiper>
         <Swiper
           style={{ maxWidth: '80%' }}
@@ -48,18 +44,11 @@ export function PhotoSlider() {
           modules={[FreeMode, Thumbs]}
           className={styles.slider2}
         >
-          <SwiperSlide>
-            slide 1
-          </SwiperSlide>
-          <SwiperSlide>
-            slide 2
-          </SwiperSlide>
-          <SwiperSlide>
-            slide 3
-          </SwiperSlide>
-          <SwiperSlide>
-            slide 4
-          </SwiperSlide>
+          {images.map((img) => (
+            <SwiperSlide key={img} className='swiperSlide_big'>
+              <Image width={440} height={665} src={img} alt={img}/>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     </>

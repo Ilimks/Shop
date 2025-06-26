@@ -33,3 +33,7 @@ export interface ModalProps {
   onClose: () => void;
   children: React.ReactNode;
 }
+
+export interface PhotoSliderProps {
+    images: string[]
+}
