@@ -12,25 +12,25 @@ import { Color } from "@/shared/ui/Color";
 const mockSizes = ["XS", "S", "M", "L", "XL", "XXL"];
 const mockColors = ["#333333", "red", "blue"];
 
-export const ProductFilters: React.FC<StockItem> = (stockItem) => {
-  const [color, setColor] = useState<string | null>(null);
-  const [selectedSizes, setSelectedSizes] = useState<string[]>([]);
-  return (
-    <>
-      <dt>Цвет:</dt>
-      <dd>
-        <Color colors={mockColors} selectedColor={color} onSelect={setColor} />
-      </dd>
-      <dt>Размер:</dt>
-      <dd>
-        <Size
-          selectedSizes={selectedSizes}
-          setSelectedSizes={setSelectedSizes}
-        />
-      </dd>
-    </>
-  );
-};
+// export const ProductFilters: React.FC<StockItem> = (stockItem) => {
+//   const [color, setColor] = useState<string | null>(null);
+//   const [selectedSizes, setSelectedSizes] = useState<string[]>([]);
+//   return (
+//     <>
+//       <dt>Цвет:</dt>
+//       <dd>
+//         <Color colors={mockColors} selectedColor={color} onSelect={setColor} />
+//       </dd>
+//       <dt>Размер:</dt>
+//       <dd>
+//         <Size
+//           selectedSizes={selectedSizes}
+//           setSelectedSizes={setSelectedSizes}
+//         />
+//       </dd>
+//     </>
+//   );
+// };
 
 export const ProductDetails: React.FC<Product> = (product) => {
   const {
@@ -39,7 +39,6 @@ export const ProductDetails: React.FC<Product> = (product) => {
     description,
     price,
     madeIn,
-    categoryId,
     createdAt,
     mainImage,
     additionalImages,
@@ -64,11 +63,11 @@ export const ProductDetails: React.FC<Product> = (product) => {
               <dd>...</dd>
               <dt>Производство: </dt>
               <dd>{madeIn}</dd>
-              <ProductFilters
-                sizeId={stock[0].sizeId}
-                colorId={stock[0].colorId}
+              {/* <ProductFilters
+                size={stock[0].size}
+                color={stock[0].color}
                 quantity={stock[0].quantity}
-              />
+              /> */}
             </dl>
           </div>
           <div className={styles.description}>
