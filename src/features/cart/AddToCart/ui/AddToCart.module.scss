@@ -1,0 +1,11 @@
+.quantitySwitch, .addToCart  {
+  display: flex;
+  align-items: center;
+  gap: 44px;
+
+  button {
+    background-color: transparent;
+    outline: none;
+    border: none;
+  }
+}
