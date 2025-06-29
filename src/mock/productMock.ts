@@ -217,3 +217,4 @@ export const mockProducts = [
       maker: 'Кыргызстан'
     }
 ];
+

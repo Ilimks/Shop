@@ -59,3 +59,7 @@ export interface NavigationBurgerProps {
 export interface SearchWithHistoryProps {
   inputProps?: Partial<InputProps>;
 };
+
+export interface PhotoSliderProps {
+    images: string[]
+}
