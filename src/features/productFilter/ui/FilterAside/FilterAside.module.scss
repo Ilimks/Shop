@@ -10,21 +10,62 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-bottom: 24px;
 
         &__name {
             cursor: pointer;
+            font-size: 24px;
+            font-weight: 700;
         }
 
         &__icon {
             cursor: pointer;
             transition: all 0.3s ease;
         }
-    }
 
+    
+    &__button {
+        font-family: Geoform;
+        font-weight: 400;
+        font-size: 12px;
+        width: 100px;
+        height: 35px;
+        border: 1px solid #1E2235;
+        border-radius: 23px;
+        background: transparent;
+    }
+    
+    }
+    &__price{
+        display: flex;
+        justify-content: space-between;
+        &__cell{
+            font-family: Geoform;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 35px;
+            border: 1px solid #292D32;
+            border-radius: 30px;
+            height: 35px;
+            width: 81px;
+            text-align: center;
+            margin-top: 24px;
+            margin-bottom: 9px;
+            
+        }
+    }
     .aside__line {
         border: 1px solid rgba(0, 0, 0, 0.1);
         width: 100%;
         height: 0px;
         margin: 24px 0;
     }
+}
+
+.aside__tmp {
+    &_flex {
+        display: flex;
+        width: 100%;
+    }
+
 }

@@ -1,56 +1,54 @@
-'use client';
-import styles from './FilterColor.module.scss'
-import React, { useState } from 'react';
-import { Box } from '@mui/material';
+"use client";
+import { useTranslator } from "@/features/filters/hooks/useTranslator";
+import style from "./Color.module.scss";
 
 interface ColorProps {
-  colors: string[];
-  selectedColor: string | null;
-  onSelect: (color: string | null) => void;
-};
+    availableColors: string[];
+    colors: string[];
+    onSelect: (color: string[]) => void;
+}
 
-export const Color: React.FC<ColorProps> = ({ colors, selectedColor, onSelect }) => {
-  const handleClick = (color: string) => {
-    if (selectedColor === color) {
-      onSelect(null);
-    } else {
-      onSelect(color);
-    }
-  };
 
-  return (
-    <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2, mt: 2 }}>
-      {colors.map((color) => (
-        <Box
-          key={color}
-          onClick={() => handleClick(color)}
-          sx={{
-            width: 30,
-            height: 30,
-            borderRadius: '50%',
-            backgroundColor: color,
-            cursor: 'pointer',
-            boxShadow: selectedColor === color ? '0 0 0 2px white' : 'none',
-            position: 'relative',
-          }}
-        >
-          {selectedColor === color && (
-            <Box
-              sx={{
-                position: 'absolute',
-                left: '50%',
-                top: '50%',
-                transform: 'translate(-50%, -50%)',
-                fontSize: 16,
-                color: 'white',
-                fontWeight: 'bold',
-              }}
-            >
-              ✓
-            </Box>
-          )}
-        </Box>
-      ))}
-    </Box>
-  );
-};
+
+export const Color = ({colors, availableColors, onSelect}: ColorProps) => {
+
+
+    const t = useTranslator()
+
+    const handleSelect = (color: string) => {
+        if (!colors.includes(color)) {
+            onSelect([...colors, color])
+        } else {
+            const newColors = colors.filter(elem => elem !== color)
+            onSelect(newColors)
+        };
+    };
+
+    const handleClickAll = () => {
+
+        if (colors.length === availableColors.length) {
+                onSelect([]);
+            } else {
+                onSelect(availableColors);
+            };
+        };
+
+
+    return (
+        <div className={style.filter}>
+            <div className={style.filterElement}>
+                <input className={style.filterElement__input} type="checkbox" id={`color`} 
+                    checked={colors.length === availableColors.length}
+                     onChange={handleClickAll}/>
+                <label className={style.filterElement__label} htmlFor={`color`}>Все</label>
+            </div>
+            {availableColors.map((elem ) =>  (
+                <div className={style.filterElement} key={elem}>
+                    <input className={style.filterElement__input} type="checkbox" id={`color${t(elem, "ru")}`} 
+                        checked={colors.includes(elem)} onChange={() => handleSelect(elem)}/>
+                    <label className={style.filterElement__label} htmlFor={`color${t(elem, "ru")}`}>{elem}</label>
+                </div>
+            ))}
+        </div>
+    )
+}

@@ -1,32 +1,59 @@
-.wrapper {
-  margin-top: 24px;
-}
+// .wrapper {
+//   margin-top: 24px;
+// }
 
-.sizes {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(48px, 1fr));
-  gap: 10px;
-}
+// .sizes {
+//   display: grid;
+//   grid-template-columns: repeat(auto-fill, minmax(48px, 1fr));
+//   gap: 10px;
+// }
 
-.size {
-  text-align: center;
-  padding: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  cursor: pointer;
-  user-select: none;
-  transition: all 0.2s ease;
-  font-weight: 500;
-}
+// .size {
+//   text-align: center;
+//   padding: 10px 0;
+//   border: 1px solid #ccc;
+//   border-radius: 8px;
+//   cursor: pointer;
+//   user-select: none;
+//   transition: all 0.2s ease;
+//   font-weight: 500;
+// }
 
-.size:hover {
-  background-color: #f4f4f4;
-  color: black;
-}
+// .size:hover {
+//   background-color: #f4f4f4;
+//   color: black;
+// }
 
-.active {
-  background-color: black;
-  color: white;
-  border-color: black;
-}
+// .active {
+//   background-color: black;
+//   color: white;
+//   border-color: black;
+// }
   
+
+
+.filter {
+    padding-top: 20px;
+    padding-bottom: 33px;
+}
+
+.filterElement {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    &__input {
+        width: 18px;
+        height: 18px;
+        margin-right: 11px;
+        border: 1px solid #FCFAF7;
+        display: block;
+    }
+    &__label {
+        font-family: Geoform;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 100%;
+        letter-spacing: 0%;
+
+    }
+}

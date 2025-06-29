@@ -7,10 +7,20 @@ import styles from "./Accordion.module.scss";
 interface AccordionProps {
   title: string;
   children: React.ReactNode;
+  onClose?: () => void;
 }
 
-export const Accordion = ({ title, children }: AccordionProps) => {
+export const Accordion = ({ title, children, onClose }: AccordionProps) => {
   const [isOpen, setIsOpen] = useState(true);
+
+
+  const handleClose = () => {
+    if (isOpen && onClose) {
+      onClose()
+    }
+    setIsOpen((prev) => !prev)
+  }
+
 
   return (
     <div className={styles.section}>
@@ -18,7 +28,7 @@ export const Accordion = ({ title, children }: AccordionProps) => {
         <h4 className={styles.name} onClick={() => setIsOpen(!isOpen)}>{title}</h4>
         <Image
           className={`${styles.icon} ${isOpen ? styles.open : ""}`}
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={handleClose}
           src="/assets/icons/ArrowFilter.svg"
           alt="Toggle filter section"
           width={16}
