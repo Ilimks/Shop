@@ -14,7 +14,9 @@ const mock = {
   createdAt: "21.01.25",
   mainImage: "/assets/images/1.webp",
   additionalImages: ["/assets/images/2.webp"],
-  stock: [],
+  stock: [
+    {colorId: 1, sizeId: 1, quantity: 1}
+  ],
 };
 
 export default async function ProductPage({

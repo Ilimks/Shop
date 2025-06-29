@@ -28,11 +28,11 @@ export const PhotoSlider: React.FC<PhotoSliderProps> = ({ images }) => {
           freeMode={true}
           watchSlidesProgress={true}
           modules={[FreeMode, Thumbs]}
-          className={styles.slider1}
+          className={styles.thumbsSlider}
         >
           {images.map((img) => (
             <SwiperSlide key={img}>
-              <Image width={120} height={120} src={img} alt={img} />
+              <Image width={120} height={120} src={img} alt={img}/>
             </SwiperSlide>
           ))}
         </Swiper>
@@ -42,11 +42,11 @@ export const PhotoSlider: React.FC<PhotoSliderProps> = ({ images }) => {
           navigation={true}
           thumbs={{ swiper: thumbsSwiper }}
           modules={[FreeMode, Thumbs]}
-          className={styles.slider2}
+          className={styles.mainSlider}
         >
           {images.map((img) => (
-            <SwiperSlide key={img} className='swiperSlide_big'>
-              <Image width={440} height={665} src={img} alt={img}/>
+            <SwiperSlide key={img}>
+              <Image width={440} height={700} src={img} alt={img} />
             </SwiperSlide>
           ))}
         </Swiper>
