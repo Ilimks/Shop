@@ -27,7 +27,7 @@ export const Header: React.FC = () => {
           <nav className={styles.header__nav}>
             <ul className={styles.header__nav__ul}>
               <li
-                onClick={() => router.push("/")}
+                onClick={() => router.push("/catalog")}
                 className={styles.header__nav__li}
               >
                 Каталог
