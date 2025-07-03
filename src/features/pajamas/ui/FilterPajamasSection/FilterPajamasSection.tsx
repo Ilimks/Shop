@@ -32,11 +32,13 @@ export const FilterPajamasSection: React.FC = () => {
                     <div className={styles.filterPajamas__box__products}>
                         {filteredProducts.map((el,idx) => (
                             <ProductCard
-                              title={el.title}
-                              image={el.image}
-                              price={el.price}
-                              maker={el.maker}
-                              key={idx}
+                                sizes={el.sizes}
+                                colors={el.colors}
+                                title={el.title}
+                                image={el.image}
+                                price={el.price}
+                                maker={el.maker}
+                                key={idx}
                             />
                         ))}
                     </div>

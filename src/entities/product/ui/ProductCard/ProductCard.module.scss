@@ -1,38 +1,94 @@
 .card {
-    width: 285px;
-    background-color: #F4F5F7;
-    border-radius: 10px;
+    font-family: Geoform;
+    width: 204px;
+    background-color: transparent;
     cursor: pointer;
-
     &__img {
         width: 100%;
-        height: 280px;
-        border-radius: 10px 10px 0 0;
+        height: 270px;
+        border-radius: 16px;
+        margin-bottom: 12px;
     }
 
     &__box {
-        padding: 16px;
 
         &__title {
-            font-weight: 600;
-            font-size: 24px;
-            line-height: 120%;
-            color: #3a3a3a;
-        }
-
-        &__maker {
-            font-weight: 500;
+            height: 20px;
+            font-weight: 400;
             font-size: 16px;
-            line-height: 150%;
-            color: #898989;
-            padding: 8px 0;
+            color: black;
+            margin-bottom: 12px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        &__sizesAndColors {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+        &__sizes {
+            width: 94px;
+            height: 25px;
+            border-radius: 12px;
+            border: 1px solid rgba(41, 45, 50, 1);
+            color: rgba(41, 45, 50, 1);
+            text-align: center;
+            font-size: 12px;
+            line-height: 25px;
+
+        }
+        &__colors {
+            width: 70px;
+            height: 25px;
+            display: flex;
+            justify-content: end;
+            gap: 12px;
+            align-items: center;
+          
+        }
+        &__colorMark {
+            border: 1px solid rgba(41, 45, 50, 1);
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        &__maker {
+            width: 100%;
+            border-radius: 12px;
+            height: 25px;
+            border: 1px solid rgba(41, 45, 50, 1);
+            text-align: center;
+            font-size: 12px;
+            line-height: 25px;
+            margin-bottom: 12px;
         }
 
-        &__price {
-            font-weight: 600;
+        &__prices {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+        &__actualPrice {
+            font-weight: 700;
             font-size: 20px;
-            line-height: 150%;
-            color: #3a3a3a;
+            color: rgba(17, 32, 103, 1);
+        }
+        &__oldPrice {
+            font-size: 16px;
+            text-decoration: line-through;
+            color: rgba(128, 128, 128, 1);
+        }
+        &__takeButton {
+            width: 100%;
+            height: 48px;
+            border-radius: 24px;
+            background-color: rgba(30, 34, 53, 1);
+            color: white;
+            font-weight: 700;
+            font-size: 16px;
         }
     }
 }

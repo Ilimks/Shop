@@ -3,7 +3,15 @@ export interface ProductCardProps {
     price: number;
     image: string;
     maker: string;
+    sizes: string[];
+    colors: string[];
+    description: string;
+
 };
+
+export interface ProductCard extends ProductCardProps {
+    id: string;
+}
 
 export interface ButtonProps {
     text: string | boolean;

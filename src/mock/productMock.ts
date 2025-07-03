@@ -1,11 +1,16 @@
-export const mockProducts = [
+
+import { ProductCard } from "@/shared/types/types";
+export const mockProducts: ProductCard[] = [
     {
       id: '1',
-      title: 'Пижама',
+      title: 'Пижама ацулауоз уаоз йузщо зщуао зцщцуао ы',
       price: 999,
       image: '/assets/images/photo.jpg',
       description: 'Мощный новый iPhone.',
-      maker: 'Кыргызстан'
+      maker: 'Кыргызстан',
+      sale: 50,
+      sizes: [ "L", "M",],
+      colors: ["green", "yellow", "black", "orange", "white"],
     },
     {
       id: '2',
@@ -13,7 +18,10 @@ export const mockProducts = [
       price: 899,
       image: '/assets/images/photo.jpg',
       description: 'Флагман от Samsung.',
-      maker: 'Кыргызстан'
+      maker: 'Кыргызстан',
+      sale: 20,
+      sizes: [ "S", "M", "L", "XS",],
+      colors: ["green", "yellow", "black", "orange", "white"],
     },
     {
       id: '3',
@@ -21,7 +29,10 @@ export const mockProducts = [
       price: 999,
       image: '/assets/images/photo.jpg',
       description: 'Мощный новый iPhone.',
-      maker: 'Кыргызстан'
+      maker: 'Кыргызстан',
+      sale: 100,
+      sizes: [  "M", "L", "S",],
+      colors: ["green", "yellow", "black", "orange", "white"],      
     },
     {
       id: '4',
@@ -29,7 +40,9 @@ export const mockProducts = [
       price: 899,
       image: '/assets/images/photo.jpg',
       description: 'Флагман от Samsung.',
-      maker: 'Кыргызстан'
+      maker: 'Кыргызстан',
+      sizes: ["XS",],
+      colors: ["green", "yellow", "black", "orange", "white"],
     },
     {
       id: '5',
@@ -37,7 +50,9 @@ export const mockProducts = [
       price: 999,
       image: '/assets/images/photo.jpg',
       description: 'Мощный новый iPhone.',
-      maker: 'Кыргызстан'
+      maker: 'Кыргызстан',
+      sizes: ["XS", "S", "M", "L"],
+      colors: ["green", "yellow", "black", "orange", "white"],
     },
     {
       id: '6',
@@ -45,7 +60,9 @@ export const mockProducts = [
       price: 899,
       image: '/assets/images/photo.jpg',
       description: 'Флагман от Samsung.',
-      maker: 'Кыргызстан'
+      maker: 'Кыргызстан',
+      sizes: ["5XL", "XS", "S", "M", "L"],
+      colors: ["green", "yellow", "black", "orange", "white"],
     },
     {
       id: '7',
@@ -53,7 +70,9 @@ export const mockProducts = [
       price: 999,
       image: '/assets/images/photo.jpg',
       description: 'Мощный новый iPhone.',
-      maker: 'Кыргызстан'
+      maker: 'Кыргызстан',
+      sizes: ["XS", "S", "M", "L"],
+      colors: ["green", "yellow", "black", "orange", "white"],
     },
     {
       id: '8',
@@ -61,7 +80,9 @@ export const mockProducts = [
       price: 899,
       image: '/assets/images/photo.jpg',
       description: 'Флагман от Samsung.',
-      maker: 'Кыргызстан'
+      maker: 'Кыргызстан',
+      sizes: ["XS", "S", "M", "L"],
+      colors: ["green", "yellow", "black", "orange", "white"],
     },
 
     {
@@ -70,7 +91,9 @@ export const mockProducts = [
       price: 999,
       image: '/assets/images/1.webp',
       description: 'Мощный новый iPhone.',
-      maker: 'Кыргызстан'
+      maker: 'Кыргызстан',
+      sizes: ["XS", "S", "M", "L"],
+      colors: ["green", "yellow", "black", "orange", "white"],
     },
     {
       id: '10',
@@ -78,7 +101,9 @@ export const mockProducts = [
       price: 899,
       image: '/assets/images/1.webp',
       description: 'Флагман от Samsung.',
-      maker: 'Кыргызстан'
+      maker: 'Кыргызстан',
+      sizes: ["XS", "S", "M", "L"],
+      colors: ["green", "yellow", "black", "orange", "white"],
     },
     {
       id: '11',
@@ -86,7 +111,9 @@ export const mockProducts = [
       price: 999,
       image: '/assets/images/1.webp',
       description: 'Мощный новый iPhone.',
-      maker: 'Кыргызстан'
+      maker: 'Кыргызстан',
+      sizes: ["XS", "S", "M", "L"],
+      colors: ["green", "yellow", "black", "orange", "white"],
     },
     {
       id: '12',
@@ -94,7 +121,9 @@ export const mockProducts = [
       price: 899,
       image: '/assets/images/1.webp',
       description: 'Флагман от Samsung.',
-      maker: 'Кыргызстан'
+      maker: 'Кыргызстан',
+      sizes: ["XS", "S", "M", "L"],
+      colors: ["green", "yellow", "black", "orange", "white"],
     },
     {
       id: '13',
@@ -102,7 +131,9 @@ export const mockProducts = [
       price: 999,
       image: '/assets/images/1.webp',
       description: 'Мощный новый iPhone.',
-      maker: 'Кыргызстан'
+      maker: 'Кыргызстан',
+      sizes: ["XS", "S", "M", "L"],
+      colors: ["green", "yellow", "black", "orange", "white"],
     },
     {
       id: '14',
@@ -110,7 +141,9 @@ export const mockProducts = [
       price: 899,
       image: '/assets/images/1.webp',
       description: 'Флагман от Samsung.',
-      maker: 'Кыргызстан'
+      maker: 'Кыргызстан',
+      sizes: ["XS", "S", "M", "L"],
+      colors: ["green", "yellow", "black", "orange", "white"],
     },
     {
       id: '15',
@@ -118,7 +151,9 @@ export const mockProducts = [
       price: 999,
       image: '/assets/images/1.webp',
       description: 'Мощный новый iPhone.',
-      maker: 'Кыргызстан'
+      maker: 'Кыргызстан',
+      sizes: ["XS", "S", "M", "L"],
+      colors: ["green", "yellow", "black", "orange", "white"],
     },
     {
       id: '16',
@@ -126,7 +161,9 @@ export const mockProducts = [
       price: 899,
       image: '/assets/images/1.webp',
       description: 'Флагман от Samsung.',
-      maker: 'Кыргызстан'
+      maker: 'Кыргызстан',
+      sizes: ["XS", "S", "M", "L"],
+      colors: ["green", "yellow", "black", "orange", "white"],
     },
     {
       id: '17',
@@ -134,7 +171,9 @@ export const mockProducts = [
       price: 999,
       image: '/assets/images/jk.webp',
       description: 'Мощный новый iPhone.',
-      maker: 'Кыргызстан'
+      maker: 'Кыргызстан',
+      sizes: ["XS", "S", "M", "L"],
+      colors: ["green", "yellow", "black", "orange", "white"],
     },
     {
       id: '18',
@@ -142,7 +181,9 @@ export const mockProducts = [
       price: 899,
       image: '/assets/images/jk.webp',
       description: 'Флагман от Samsung.',
-      maker: 'Кыргызстан'
+      maker: 'Кыргызстан',
+      sizes: ["XS", "S", "M", "L"],
+      colors: ["green", "yellow", "black", "orange", "white"],
     },
     {
       id: '19',
@@ -150,7 +191,9 @@ export const mockProducts = [
       price: 999,
       image: '/assets/images/jk.webp',
       description: 'Мощный новый iPhone.',
-      maker: 'Кыргызстан'
+      maker: 'Кыргызстан',
+      sizes: ["XS", "S", "M", "L"],
+      colors: ["green", "yellow", "black", "orange", "white"],
     },
     {
       id: '20',
@@ -158,7 +201,9 @@ export const mockProducts = [
       price: 899,
       image: '/assets/images/jk.webp',
       description: 'Флагман от Samsung.',
-      maker: 'Кыргызстан'
+      maker: 'Кыргызстан',
+      sizes: ["XS", "S", "M", "L"],
+      colors: ["green", "yellow", "black", "orange", "white"],
     },
     {
       id: '21',
@@ -166,7 +211,9 @@ export const mockProducts = [
       price: 999,
       image: '/assets/images/jk.webp',
       description: 'Мощный новый iPhone.',
-      maker: 'Кыргызстан'
+      maker: 'Кыргызстан',
+      sizes: ["XS", "S", "M", "L"],
+      colors: ["green", "yellow", "black", "orange", "white"],
     },
     {
       id: '22',
@@ -174,7 +221,9 @@ export const mockProducts = [
       price: 899,
       image: '/assets/images/jk.webp',
       description: 'Флагман от Samsung.',
-      maker: 'Кыргызстан'
+      maker: 'Кыргызстан',
+      sizes: ["XS", "S", "M", "L"],
+      colors: ["green", "yellow", "black", "orange", "white"],
     },
     {
       id: '23',
@@ -182,7 +231,9 @@ export const mockProducts = [
       price: 999,
       image: '/assets/images/jk.webp',
       description: 'Мощный новый iPhone.',
-      maker: 'Кыргызстан'
+      maker: 'Кыргызстан',
+      sizes: ["XS", "S", "M", "L"],
+      colors: ["green", "yellow", "black", "orange", "white"],
     },
     {
       id: '24',
@@ -190,6 +241,8 @@ export const mockProducts = [
       price: 899,
       image: '/assets/images/jk.webp',
       description: 'Флагман от Samsung.',
-      maker: 'Кыргызстан'
+      maker: 'Кыргызстан',
+      sizes: ["XS", "S", "M", "L"],
+      colors: ["green", "yellow", "black", "orange", "white"],
     }
 ];
