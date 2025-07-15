@@ -1,15 +1,17 @@
-export interface ProductCardProps {
+export interface IProductCardProps {
     title: string;
     price: number;
     image: string;
-    maker: string;
+    description: string;
+    country: string;
     sizes: string[];
     colors: string[];
-    description: string;
-
+    sale?: number;
+    category: string;
+    sex: "male" | "female" | "unisex"
 };
 
-export interface ProductCard extends ProductCardProps {
+export interface IProductCard extends IProductCardProps {
     id: string;
 }
 

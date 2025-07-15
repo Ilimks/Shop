@@ -1,13 +1,13 @@
+"use client"
 import React from "react"
 import styles from "./CatalogTitle.module.scss"
+import { useAppSelector } from "@/shared/lib/redux/hooks"
 
 
-type CatalogTitleProps = {
-    goodsCounter: number,
-}
+export const CatalogTitle = () => {
 
-export const CatalogTitle: React.FC<CatalogTitleProps> = ({goodsCounter}) => {
 
+    const cardCounter = useAppSelector(state => state.cardCouter.counter)
 
     function textConverter (number: number): string {
 
@@ -26,11 +26,10 @@ export const CatalogTitle: React.FC<CatalogTitleProps> = ({goodsCounter}) => {
 
 
 
-
     return (
         <>
             <h2 className={styles.mainTitle}>Результаты поиска</h2>
-            <h6 className={styles.goodsCounter}>{textConverter(goodsCounter)}</h6>
+            <h6 className={styles.goodsCounter}>{textConverter(cardCounter)}</h6>
 
         </>
     )

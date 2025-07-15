@@ -1,4 +1,4 @@
-
+"use client"
 import universalStyles from "@/shared/styles/universalStyles.module.scss";
 import { Breadcrumbs } from "@/shared/ui/Breadcrumbs";
 import { FilterAside } from '@/features/productFilter/ui/FilterAside/FilterAside';
@@ -7,6 +7,13 @@ import {CatalogContent} from "@/features/catalog/ui/CatalogContent/CatalogConten
 
 
 const CatalogPage = () => {
+
+
+
+
+
+
+
     return(
         <main>
             <Breadcrumbs />
@@ -14,7 +21,7 @@ const CatalogPage = () => {
                 <div className={universalStyles.pageComposition}>
                     <FilterAside />
                     <div className={universalStyles.pageContent}>
-                        <CatalogTitle goodsCounter={31}/>
+                        <CatalogTitle />
                         <CatalogContent/>
                     </div>
                 </div>

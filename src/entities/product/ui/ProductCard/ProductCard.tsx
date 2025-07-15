@@ -1,9 +1,9 @@
 import Image from "next/image";
 import styles from './ProductCard.module.scss';
-import { ProductCardProps } from '@/shared/types/types';
+import { IProductCardProps } from '@/shared/types/types';
 import aplySale from "@/shared/functions/aplySale";
 
-export const ProductCard: React.FC<ProductCardProps> = ({sale, colors, sizes, title, price, image, maker }: ProductCardProps) => {
+export const ProductCard: React.FC<IProductCardProps> = ({sale, colors, sizes, title, price, image, country, category }: IProductCardProps) => {
   
   
   function sizePrinter (sizes: string[]): string {
@@ -124,7 +124,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({sale, colors, sizes, ti
         <div className={styles.card__box__sizesAndColors}>
           <div className={styles.card__box__sizes}>{sizePrinter(sizes)}</div>
           <div className={styles.card__box__colors}>
-            {colors.map((color, index )=> (
+            {colors.map((color: string, index: number )=> (
               index < 3 &&
               <div 
                 className={styles.card__box__colorMark}
@@ -137,7 +137,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({sale, colors, sizes, ti
 
         </div>
         
-        <p className={styles.card__box__maker}>{maker}</p>
+        <p className={styles.card__box__maker}>{country}</p>
         <div className={styles.card__box__prices}>
           {sale ? <>
             <div className={styles.card__box__actualPrice}>{aplySale(price, sale)} сом</div>

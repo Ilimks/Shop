@@ -37,8 +37,11 @@ export const FilterPajamasSection: React.FC = () => {
                                 title={el.title}
                                 image={el.image}
                                 price={el.price}
-                                maker={el.maker}
+                                country={el.country}
                                 key={idx}
+                                description={el.description}
+                                category={el.category}
+                                sex={el.sex}
                             />
                         ))}
                     </div>

@@ -34,7 +34,7 @@ export const useFilterState = () => {
     sizes: availableSizes,
     priority: "newest",
     sex: [ "male", "female", "unisex"],
-    country: availableColors,
+    country: availableCountries,
     categoryes: availableCategories
   });
 

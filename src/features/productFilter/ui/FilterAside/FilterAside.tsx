@@ -1,6 +1,5 @@
 "use client";
-import { motion, AnimatePresence } from "framer-motion";
-import { useFilterState } from "@/features/filters";
+import { motion, AnimatePresence,} from "framer-motion";
 import { Range } from "@/shared/ui/Range";
 import { Color } from "@/shared/ui/Color";
 import { Size } from "@/shared/ui/Size";
@@ -12,16 +11,21 @@ import { Categories } from "@/shared/ui/Categories/Categories";
 import { Country } from "@/shared/ui/Country/Country";
 import { Sex } from "@/shared/ui/Sex/Sex";
 import { FilterButton } from "@/shared/ui/Buttons/ui/FilterButton";
-
+import { resetFilter, setPriority, setPriceRange,
+   setSizes, setColor, setCategories, setCountry,
+   setSex,}  from '@/store/slices/filterSlice';
+import { useAppDispatch, useAppSelector } from "@/shared/lib/redux/hooks";
+import { availableCountries, availableCategories,
+   availableColors, availableSizes } from "@/store/slices/filterSlice";
 
 
 
 export const FilterAside = () => {
   const [openAll, setOpenAll] = useState(true);
-  const { filters, availableCategories, availableSizes, availableColors, availableCountries,
-     setColor, setSizes, setPriceRange,
-      clearFilters, setPriority,
-      setCategoryes, setCountry, setSex } = useFilterState();
+  const dispatch = useAppDispatch()
+  const filter = useAppSelector(state => state.filter)
+  
+
 
   const OpenAll = () => setOpenAll((prev) => !prev);
 
@@ -34,7 +38,7 @@ export const FilterAside = () => {
         <h3 onClick={OpenAll} className={styles.aside__header__name}>
           Фильтр
         </h3>
-        <FilterButton className={styles.aside__header__button} action={clearFilters}>Сбросить всё</FilterButton>
+        <FilterButton className={styles.aside__header__button} action={() => dispatch(resetFilter(null))}>Сбросить всё</FilterButton>
       </div>
 
       <AnimatePresence initial={false}>
@@ -47,61 +51,61 @@ export const FilterAside = () => {
             transition={{ duration: 0.3 }}
           >
 
-            <Accordion onClose={() => setPriority("newest")} title="Сортировка">
-              <GoodsPriority priority={filters.priority} onSelect={setPriority}/>
+            <Accordion onClose={() => dispatch(setPriority("newest"))} title="Сортировка">
+              <GoodsPriority priority={filter.priority} onSelect={(value) => dispatch(setPriority(value))}/>
             </Accordion>
 
             <Accordion title="Цена">
               <div className={styles.aside__price}>
-                <div className={styles.aside__price__cell}>{filters.minPrice} сом</div>
-                <div className={styles.aside__price__cell}>{filters.maxPrice} сом</div>
+                <div className={styles.aside__price__cell}>{filter.minPrice} сом</div>
+                <div className={styles.aside__price__cell}>{filter.maxPrice} сом</div>
               </div>
 
               <Range
                 min={0}
                 max={5000}
-                initialMin={filters.minPrice}
-                initialMax={filters.maxPrice}
-                onChange={(min, max) => setPriceRange(min, max)}
+                initialMin={filter.minPrice}
+                initialMax={filter.maxPrice}
+                onChange={(min, max) => dispatch(setPriceRange({minPrice: min, maxPrice: max})) }
               />
             </Accordion>
 
 
-            <Accordion onClose={() => setSizes([])} title="Размер">
+            <Accordion onClose={() => dispatch(setSizes([]))} title="Размер">
               <Size 
                 availableSizes={availableSizes}
-                selectedSizes={filters.sizes}
-                onSelect={setSizes} 
+                selectedSizes={filter.sizes}
+                onSelect={(value) => dispatch(setSizes(value))} 
               />
             </Accordion>
 
 
             <Accordion title="Категория">
               <Categories 
-                categories={filters.categoryes} 
+                categories={filter.categories} 
                 availableCategories={availableCategories} 
-                onSelect={setCategoryes}
+                onSelect={(value)=>dispatch(setCategories(value))}
               />
             </Accordion>
 
 
             <Accordion title="Страна">
               <Country 
-                countries={filters.country}
+                countries={filter.country}
                 availableCountries={availableCountries}
-                onSelect={setCountry}
+                onSelect={(value)=> dispatch(setCountry(value))}
               />
             </Accordion>
 
             <Accordion title="Пол">
-              <Sex sexes={filters.sex} onSelect={setSex} />
+              <Sex sexes={filter.sex} onSelect={(value) => dispatch(setSex(value))} />
             </Accordion>
 
             <Accordion title="Цвет">
               <Color
                 availableColors={availableColors}
-                colors={filters.color}
-                onSelect={setColor}
+                colors={filter.color}
+                onSelect={(color)=>dispatch(setColor(color))}
               />
             </Accordion>
 
