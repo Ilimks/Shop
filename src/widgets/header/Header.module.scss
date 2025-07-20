@@ -13,26 +13,14 @@
             cursor: pointer;
         }
 
-        .header__nav {
-            width: 358px;
-
-            .header__nav__ul {
-                display: flex;
-                justify-content: space-between;
-
-                .header__nav__li {
-                    cursor: pointer;
-                    font-weight: 500;
-                    font-size: 16px;
-                    color: #fff;
-                }
-            }
-        }
-
         .header__nav__right {
             width: 325px;
             display: flex;
             column-gap: 32px;
+        }
+
+        .header__mobile {
+            display: none;
         }
     }
 }

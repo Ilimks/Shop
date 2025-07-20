@@ -1,31 +1,36 @@
-.card {
-    font-family: Geoform;
-    width: 204px;
-    background-color: transparent;
+.productCard {
+    max-width: 204px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
     cursor: pointer;
-    &__img {
+    position: relative;
+
+    &__image {
         width: 100%;
         height: 270px;
-        border-radius: 16px;
-        margin-bottom: 12px;
+        border-radius: 30px;
+        object-fit: cover;
     }
 
-    &__box {
+    .productCard__icons {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
 
-        &__title {
-            height: 20px;
-            font-weight: 400;
-            font-size: 16px;
-            color: black;
-            margin-bottom: 12px;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            overflow: hidden;
-        }
-        &__sizesAndColors {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 12px;
+    &__content { 
+        display: flex;
+        flex-direction: column;
+        gap: 12px;   
+
+        .productCard__title {
+           font-weight: 500;
+           font-size: 16px;
+           color: #000;
+           white-space: nowrap;
+           overflow: hidden;
+           text-overflow: ellipsis;
         }
         &__sizes {
             width: 94px;
@@ -37,58 +42,86 @@
             font-size: 12px;
             line-height: 25px;
 
-        }
-        &__colors {
-            width: 70px;
-            height: 25px;
+        .productCard__details {
             display: flex;
-            justify-content: end;
-            gap: 12px;
+            gap: 20px;
             align-items: center;
-          
-        }
-        &__colorMark {
-            border: 1px solid rgba(41, 45, 50, 1);
-            width: 14px;
-            height: 14px;
-            border-radius: 50%;
-            flex-shrink: 0;
-        }
-        &__maker {
-            width: 100%;
-            border-radius: 12px;
-            height: 25px;
-            border: 1px solid rgba(41, 45, 50, 1);
-            text-align: center;
-            font-size: 12px;
-            line-height: 25px;
-            margin-bottom: 12px;
+
+            .productCard__sizes {
+                width: 100%;
+                height: 25px;
+                border: 1px solid #292d32;
+                border-radius: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .productCard__sizesText {
+                    font-weight: 400;
+                    font-size: 12px;
+                    color: #000;
+                }
+            }
+
+            .productCard__colors {
+                display: flex;
+                column-gap: 12px;
+
+                .productCard__color {
+                    width: 14px;
+                    height: 14px;
+                    border-radius: 50%;
+                    border: 1px solid #000;
+                    background-color: aquamarine;
+                }
+            }
         }
 
-        &__prices {
+        .productCard__maker {
             width: 100%;
+            height: 25px;
+            border: 1px solid #292d32;
+            border-radius: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            .maker {
+                font-weight: 400;
+                font-size: 12px;
+                color: #000;
+                position: relative;
+                padding-left: 21px;
+            }
+
+            .maker::after {
+                content: '';
+                position: absolute;
+                background-image: url(/assets/icons/LocationCardMaker.svg);
+                width: 16px;
+                height: 16px;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        .productCard__priceWrapper {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 12px;
-        }
-        &__actualPrice {
-            font-weight: 700;
-            font-size: 20px;
-            color: rgba(17, 32, 103, 1);
-        }
-        &__oldPrice {
-            font-size: 16px;
-            text-decoration: line-through;
-            color: rgba(128, 128, 128, 1);
-        }
-        &__takeButton {
-            width: 100%;
-            height: 48px;
-            border-radius: 24px;
-            background-color: rgba(30, 34, 53, 1);
-            color: white;
-            font-weight: 700;
-            font-size: 16px;
+            align-items: center;
+
+            .productCard__price {
+                font-weight: 700;
+                font-size: 20px;
+                color: #0024cd;
+            }
+
+            .productCard__oldPrice {
+                font-weight: 400;
+                font-size: 16px;
+                text-decoration: line-through;
+                color: #808080;
+            }
         }
     }
 }

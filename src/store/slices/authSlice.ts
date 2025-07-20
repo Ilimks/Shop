@@ -94,6 +94,10 @@ const authSlice = createSlice({
         localStorage.setItem("userData", JSON.stringify(state.user));
       }
     },
+    resetAuthState: (state) => {
+      state.status = "idle";
+      state.error = null;
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -140,6 +144,6 @@ const authSlice = createSlice({
   },
 });
 
-export const { logout, setAuthModalOpen, setAuthMode, updateUserData } =
+export const { logout, setAuthModalOpen, setAuthMode, updateUserData, resetAuthState } =
   authSlice.actions;
 export default authSlice.reducer;

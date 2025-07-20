@@ -1,0 +1,19 @@
+.sliderWrap {
+  max-width: 685px;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+.mainSlider {
+  border-radius: 24px;
+  img {
+    border-radius: 24px;
+  }
+}
+
+.thumbsSlider {
+  border-radius: 24px;
+  img {
+    border-radius: 24px;
+  }
+}

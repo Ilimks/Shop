@@ -11,33 +11,28 @@
       justify-content: center;
     }
   
-    // Uncomment the following lines if you want to style the raw items
-    // Декоментировать следующие строки, если вы хотите стилизовать сырые элементы
-    
-    // &__item {
-    //   padding: 1rem;
-    //   border: 1px solid #ddd;
-    //   border-radius: 8px;
-    //   background-color: #fafafa;
-    //   min-width: 150px;
-    //   text-align: center;
-    // }
-  
     &__controls {
       display: flex;
       gap: 0.5rem;
     }
+
+    &__dots {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   
     &__button {
-      padding: 0.5rem 1rem;
-      border: 1px solid #ccc;
-      background-color: white;
+      padding: 0.5rem 0.45rem;
+      border: 0px solid;
       border-radius: 5px;
+      background-color: white;
       cursor: pointer;
+      color: #1E2235;
       transition: all 0.2s ease;
   
-      &:hover:not(:disabled) {
-        background-color: #f0f0f0;
+      &:hover:not(:disabled, &__active) {
+        color: #000000;
       }
   
       &:disabled {
@@ -46,7 +41,9 @@
       }
   
       &__active {
-        background-color: rgb(197, 197, 197);
+        border: 1px solid #ccc;
+        color: #FFFFFF;
+        background-color: #1E2235;
       }
     }
   }

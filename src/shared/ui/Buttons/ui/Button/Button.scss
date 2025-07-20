@@ -1,48 +1,105 @@
 .Button  {
-    border-radius: 10px;
+    border: none;
+    border-radius: 30px;
     transition: all .3s ease-in-out;
+    position: relative;
 }
+
+
+
+
+
+
+.Button.card {
+    background: #1e2235;
+    color: #fff;
+}
+
+Button.card:hover {
+    background-color: #3D4FA5;
+}
+
+.Button.cardSize {
+    font-weight: 700;
+    font-size: 16px;
+    width: 100%;
+    padding: 12px 77.5px 12px 43.5px;
+}
+
+.Button.cardSize::after {
+    content: '';
+    position: absolute;
+    background-image: url(/assets/icons/Cart.svg);
+    width: 24px;
+    height: 24px;
+    top: 8px;
+    right: 45px;
+}
+
+@media screen and (max-width: 500px) {
+    .Button.cardSize {
+        font-size: 12px;
+        padding: 12px 74px 12px 44px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .Button.cardSize {
+        font-size: 12px;
+        padding: 12px 44px 12px 24px;
+    }
+
+    .Button.cardSize::after {
+        right: 30px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .Button.cardSize::after {
+        right: 25px;
+    }
+}
+
+
+
 
 
 
 
 .Button.show {
-    border: 1px solid #B88E2F;
-    background-color: #fff;
-    color: #B88E2F;
+    background: #fcfaf7;
+    color: #1e2235;
 }
 
 Button.show:hover {
-    background-color: #B88E2F;
-    color: #fff;
+    background: #b9c5ff;
 }
 
 .Button.showSize {
-    font-size: 16px;
     font-weight: 700;
-    line-height: 193%;
-    padding: 12px 50px;
+    font-size: 16px;
+    padding: 8px 73px;
 }
 
 
 
 
-.Button.filter{
-    border: none;
-    border-radius: 62px;
-    background-color: #B88E2F;
+
+
+
+.Button.modal {
+    width: 100%;
+    border-radius: 10px;
+    background: #1e2235;
     color: #fff;
 }
 
-Button.filter:hover {
-    border: 1px solid #B88E2F;
-    background: none;
-    color: #B88E2F;
+Button.modal:hover {
+    background: #3d4fa5;
 }
 
-.Button.filterSize {
-    width: 100%;
-    font-size: 14px;
-    font-weight: 500;
-    padding: 14.5px 0;
+.Button.modalSize {
+    font-weight: 700;
+    font-size: 16px;
+    padding: 20px 73px;
 }

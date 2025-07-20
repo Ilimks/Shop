@@ -17,7 +17,7 @@ import authReducer from "./slices/authSlice";
 import orderReducer from "./slices/orderSlice";
 import filterReudser from "./slices/filterSlice"
 import cardCounterReudser from "./slices/cardCounterSlice"
-
+import adminReducer from './slices/adminSlice';
 
 const persistConfig = {
   key: "root",
@@ -32,6 +32,7 @@ const rootReducer = combineReducers({
   orders: orderReducer,
   filter: filterReudser,
   cardCouter: cardCounterReudser,
+  admin: adminReducer
 });
 
 

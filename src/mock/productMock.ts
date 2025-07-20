@@ -3,8 +3,9 @@ import { IProductCard } from "@/shared/types/types";
 export const mockProducts: IProductCard[] = [
     {
       id: '1',
-      title: 'Пижама ацулауоз уаоз йузщо зщуао зцщцуао ы',
-      price: 500,
+      title: 'Пижама со штанами шелковая домашняя',
+      price: 1000,
+      oldPrice: 1200,
       image: '/assets/images/photo.jpg',
       description: 'Мощный новый iPhone.',
       country: 'Кыргызстан',
@@ -16,8 +17,9 @@ export const mockProducts: IProductCard[] = [
     },
     {
       id: '2',
-      title: 'Пижама',
-      price: 600,
+      title: 'Пижама со штанами шелковая домашняя',
+      price: 899,
+      oldPrice: 1200,
       image: '/assets/images/photo.jpg',
       description: 'Флагман от Samsung.',
       country: 'Кыргызстан',
@@ -29,8 +31,9 @@ export const mockProducts: IProductCard[] = [
     },
     {
       id: '3',
-      title: 'Пижама',
-      price: 700,
+      title: 'Пижама со штанами шелковая домашняя',
+      price: 999,
+      oldPrice: 1200,
       image: '/assets/images/photo.jpg',
       description: 'Мощный новый iPhone.',
       country: 'Кыргызстан',
@@ -42,8 +45,9 @@ export const mockProducts: IProductCard[] = [
     },
     {
       id: '4',
-      title: 'Пижама',
-      price: 800,
+      title: 'Пижама со штанами шелковая домашняя',
+      price: 899,
+      oldPrice: 1200,
       image: '/assets/images/photo.jpg',
       description: 'Флагман от Samsung.',
       country: 'Кыргызстан',
@@ -54,8 +58,9 @@ export const mockProducts: IProductCard[] = [
     },
     {
       id: '5',
-      title: 'Пижама',
+      title: 'Пижама со штанами шелковая домашняя',
       price: 999,
+      oldPrice: 1200,
       image: '/assets/images/photo.jpg',
       description: 'Мощный новый iPhone.',
       country: 'Кыргызстан',
@@ -66,8 +71,9 @@ export const mockProducts: IProductCard[] = [
     },
     {
       id: '6',
-      title: 'Пижама',
-      price: 1299,
+      title: 'Пижама со штанами шелковая домашняя',
+      price: 899,
+      oldPrice: 1200,
       image: '/assets/images/photo.jpg',
       description: 'Флагман от Samsung.',
       country: 'Турция',
@@ -78,8 +84,9 @@ export const mockProducts: IProductCard[] = [
     },
     {
       id: '7',
-      title: 'Пижама',
-      price: 1699,
+      title: 'Пижама со штанами шелковая домашняя',
+      price: 999,
+      oldPrice: 1200,
       image: '/assets/images/photo.jpg',
       description: 'Мощный новый iPhone.',
       country: 'Кыргызстан',
@@ -90,8 +97,9 @@ export const mockProducts: IProductCard[] = [
     },
     {
       id: '8',
-      title: 'Пижама',
-      price: 2399,
+      title: 'Пижама со штанами шелковая домашняя',
+      price: 899,
+      oldPrice: 1200,
       image: '/assets/images/photo.jpg',
       description: 'Флагман от Samsung.',
       country: 'Китай',
@@ -104,7 +112,44 @@ export const mockProducts: IProductCard[] = [
     {
       id: '9',
       title: 'Халат',
-      price: 3999,
+      price: 999,
+      oldPrice: 1200,
+      image: '/assets/images/1.webp',
+      description: 'Мощный новый iPhone.',
+      maker: 'Кыргызстан'
+    },
+    {
+      id: '10',
+      title: 'Халат',
+      price: 899,
+      oldPrice: 1200,
+      image: '/assets/images/1.webp',
+      description: 'Флагман от Samsung.',
+      maker: 'Кыргызстан'
+    },
+    {
+      id: '11',
+      title: 'Халат',
+      price: 999,
+      oldPrice: 1200,
+      image: '/assets/images/1.webp',
+      description: 'Мощный новый iPhone.',
+      maker: 'Кыргызстан'
+    },
+    {
+      id: '12',
+      title: 'Халат',
+      price: 899,
+      oldPrice: 1200,
+      image: '/assets/images/1.webp',
+      description: 'Флагман от Samsung.',
+      maker: 'Кыргызстан'
+    },
+    {
+      id: '13',
+      title: 'Халат',
+      price: 999,
+      oldPrice: 1200,
       image: '/assets/images/1.webp',
       description: 'Мощный новый iPhone.',
       country: 'Китай',
@@ -114,3 +159,103 @@ export const mockProducts: IProductCard[] = [
       sex: "male",
     },
   ]
+    {
+      id: '14',
+      title: 'Халат',
+      price: 899,
+      oldPrice: 1200,
+      image: '/assets/images/1.webp',
+      description: 'Флагман от Samsung.',
+      maker: 'Кыргызстан'
+    },
+    {
+      id: '15',
+      title: 'Халат',
+      price: 999,
+      oldPrice: 1200,
+      image: '/assets/images/1.webp',
+      description: 'Мощный новый iPhone.',
+      maker: 'Кыргызстан'
+    },
+    {
+      id: '16',
+      title: 'Халат',
+      price: 899,
+      oldPrice: 1200,
+      image: '/assets/images/1.webp',
+      description: 'Флагман от Samsung.',
+      maker: 'Кыргызстан'
+    },
+    {
+      id: '17',
+      title: 'Костюмы',
+      price: 999,
+      oldPrice: 1200,
+      image: '/assets/images/jk.webp',
+      description: 'Мощный новый iPhone.',
+      maker: 'Кыргызстан'
+    },
+    {
+      id: '18',
+      title: 'Костюмы',
+      price: 899,
+      oldPrice: 1200,
+      image: '/assets/images/jk.webp',
+      description: 'Флагман от Samsung.',
+      maker: 'Кыргызстан'
+    },
+    {
+      id: '19',
+      title: 'Костюмы',
+      price: 999,
+      oldPrice: 1200,
+      image: '/assets/images/jk.webp',
+      description: 'Мощный новый iPhone.',
+      maker: 'Кыргызстан'
+    },
+    {
+      id: '20',
+      title: 'Костюмы',
+      price: 899,
+      oldPrice: 1200,
+      image: '/assets/images/jk.webp',
+      description: 'Флагман от Samsung.',
+      maker: 'Кыргызстан'
+    },
+    {
+      id: '21',
+      title: 'Костюмы',
+      price: 999,
+      oldPrice: 1200,
+      image: '/assets/images/jk.webp',
+      description: 'Мощный новый iPhone.',
+      maker: 'Кыргызстан'
+    },
+    {
+      id: '22',
+      title: 'Костюмы',
+      price: 899,
+      oldPrice: 1200,
+      image: '/assets/images/jk.webp',
+      description: 'Флагман от Samsung.',
+      maker: 'Кыргызстан'
+    },
+    {
+      id: '23',
+      title: 'Костюмы',
+      price: 999,
+      oldPrice: 1200,
+      image: '/assets/images/jk.webp',
+      description: 'Мощный новый iPhone.',
+      maker: 'Кыргызстан'
+    },
+    {
+      id: '24',
+      title: 'Костюмы',
+      price: 899,
+      oldPrice: 1200,
+      image: '/assets/images/jk.webp',
+      description: 'Флагман от Samsung.',
+      maker: 'Кыргызстан'
+    }
+];

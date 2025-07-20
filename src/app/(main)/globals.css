@@ -26,6 +26,12 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Majestic";
+  src: url('/assets/fonts/Majestic/Majestic_0.ttf') format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
 
 * {
   margin: 0;
@@ -41,7 +47,7 @@ body {
   display: flex;
   flex-direction: column;
   font-family: "Geoform";
-  background-color: #FCFAF7;
+  background-color: #fff;
 }
 
 a {
@@ -59,7 +65,7 @@ button {
 }
 
 
-@media screen and (max-width: 1350px) {
+@media screen and (max-width: 1300px) {
   .container{
       width: 88%;
   }

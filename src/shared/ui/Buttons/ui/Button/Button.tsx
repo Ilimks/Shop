@@ -4,8 +4,8 @@ import { ButtonProps } from '@/shared/types/types';
 export const Button: React.FC<ButtonProps> = ({ 
   text, 
   onClick, 
-  variant = 'show', 
-  size = 'showSize', 
+  variant = 'card', 
+  size = 'cardSize', 
   disabled = false,
   type = 'button',
 }) => {

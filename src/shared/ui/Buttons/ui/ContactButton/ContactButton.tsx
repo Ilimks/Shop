@@ -1,25 +1,18 @@
-"use client"
-import Image from 'next/image'
-import styles from './ContactButton.module.scss'
-import { useRouter } from 'next/navigation';
+import Image from 'next/image';
+import Link from 'next/link';
+import styles from './ContactButton.module.scss';
 
 export const ContactButton = () => {
-
-    const router = useRouter();
-
     return (
-        <div className={styles.contactButton}>
+        <Link href="/contacts" className={styles.contactButton}>
             <Image
-              onClick={() => router.push('/contacts')} 
-              className={styles.header__box__right__cart} 
-              src="/assets/icons/Contact.svg" 
-              alt="Иконка Контакт" 
-              width={24} 
-              height={24} 
+              className={styles.header__box__right__cart}
+              src="/assets/icons/Contact.svg"
+              alt="Иконка Контакт"
+              width={24}
+              height={24}
             />
-            <span className={styles.name}>
-                Контакты
-            </span>
-        </div>
-    )
-}
+            <span className={styles.name}>Контакты</span>
+        </Link>
+    );
+};
