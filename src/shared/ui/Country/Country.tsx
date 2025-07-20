@@ -1,5 +1,5 @@
 "use client";
-import { useTranslator } from "@/features/filters/hooks/useTranslator";
+import { useTranslator } from "@/shared/functions/useTranslator";
 import style from "./Country.module.scss";
 
 

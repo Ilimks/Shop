@@ -1,4 +1,6 @@
-export const mockProducts = [
+
+import { IProductCard } from "@/shared/types/types";
+export const mockProducts: IProductCard[] = [
     {
       id: '1',
       title: 'Пижама со штанами шелковая домашняя',
@@ -6,7 +8,12 @@ export const mockProducts = [
       oldPrice: 1200,
       image: '/assets/images/photo.jpg',
       description: 'Мощный новый iPhone.',
-      maker: 'Кыргызстан'
+      country: 'Кыргызстан',
+      sale: 50,
+      sizes: [ "L", "M",],
+      colors: ["Green", "Yellow",  "Orange", "White"],
+      category: "Костюм",
+      sex: "male",
     },
     {
       id: '2',
@@ -15,7 +22,12 @@ export const mockProducts = [
       oldPrice: 1200,
       image: '/assets/images/photo.jpg',
       description: 'Флагман от Samsung.',
-      maker: 'Кыргызстан'
+      country: 'Кыргызстан',
+      sale: 20,
+      sizes: [ "S", "M", "L", "XS",],
+      colors: [ "Black", "Orange", "White"],
+      category: "Халат",
+      sex: "female",
     },
     {
       id: '3',
@@ -24,7 +36,12 @@ export const mockProducts = [
       oldPrice: 1200,
       image: '/assets/images/photo.jpg',
       description: 'Мощный новый iPhone.',
-      maker: 'Кыргызстан'
+      country: 'Кыргызстан',
+      sale: 100,
+      sizes: [  "M", "L", "S",],
+      colors: ["Green", "Yellow", "Black", "Orange", "White"], 
+      category: "Халат" ,
+      sex: "male",    
     },
     {
       id: '4',
@@ -33,7 +50,11 @@ export const mockProducts = [
       oldPrice: 1200,
       image: '/assets/images/photo.jpg',
       description: 'Флагман от Samsung.',
-      maker: 'Кыргызстан'
+      country: 'Кыргызстан',
+      sizes: ["XS",],
+      colors: ["Green", "Orange", "White"],
+      category: "Костюм",
+      sex: "female",
     },
     {
       id: '5',
@@ -42,7 +63,11 @@ export const mockProducts = [
       oldPrice: 1200,
       image: '/assets/images/photo.jpg',
       description: 'Мощный новый iPhone.',
-      maker: 'Кыргызстан'
+      country: 'Кыргызстан',
+      sizes: ["XS", "S", "M", "L"],
+      colors: ["Green", "Yellow", "Orange", "White"],
+      category: "Халат",
+      sex: "male",
     },
     {
       id: '6',
@@ -51,7 +76,11 @@ export const mockProducts = [
       oldPrice: 1200,
       image: '/assets/images/photo.jpg',
       description: 'Флагман от Samsung.',
-      maker: 'Кыргызстан'
+      country: 'Турция',
+      sizes: ["5XL", "XS", "S", "M", "L"],
+      colors: ["Green", "Yellow", "Black", "Orange", "White"],
+      category: "Пижама",
+      sex: "unisex",
     },
     {
       id: '7',
@@ -60,7 +89,11 @@ export const mockProducts = [
       oldPrice: 1200,
       image: '/assets/images/photo.jpg',
       description: 'Мощный новый iPhone.',
-      maker: 'Кыргызстан'
+      country: 'Кыргызстан',
+      sizes: ["XS", "S", "M", "L"],
+      colors: ["Green", "Yellow", "Black", "Orange", "White"],
+      category: "Пижама",
+      sex: "male",
     },
     {
       id: '8',
@@ -69,7 +102,11 @@ export const mockProducts = [
       oldPrice: 1200,
       image: '/assets/images/photo.jpg',
       description: 'Флагман от Samsung.',
-      maker: 'Кыргызстан'
+      country: 'Китай',
+      sizes: ["XS", "S", "M", "L"],
+      colors: ["Green", "Yellow", "Black", "Orange", "White"],
+      category: "Пижама",
+      sex: "male",
     },
 
     {
@@ -115,8 +152,13 @@ export const mockProducts = [
       oldPrice: 1200,
       image: '/assets/images/1.webp',
       description: 'Мощный новый iPhone.',
-      maker: 'Кыргызстан'
+      country: 'Китай',
+      sizes: ["XS", "S", "M", "L"],
+      colors: ["Green", "Yellow", "Black", "Orange", "White"],
+      category: "Пижама",
+      sex: "male",
     },
+  ]
     {
       id: '14',
       title: 'Халат',
@@ -217,4 +259,3 @@ export const mockProducts = [
       maker: 'Кыргызстан'
     }
 ];
-

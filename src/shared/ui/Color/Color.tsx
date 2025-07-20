@@ -1,5 +1,5 @@
 "use client";
-import { useTranslator } from "@/features/filters/hooks/useTranslator";
+import { useTranslator } from "@/shared/functions/useTranslator";
 import style from "./Color.module.scss";
 
 interface ColorProps {
@@ -44,9 +44,9 @@ export const Color = ({colors, availableColors, onSelect}: ColorProps) => {
             </div>
             {availableColors.map((elem ) =>  (
                 <div className={style.filterElement} key={elem}>
-                    <input className={style.filterElement__input} type="checkbox" id={`color${t(elem, "ru")}`} 
+                    <input className={style.filterElement__input} type="checkbox" id={`color${elem}`} 
                         checked={colors.includes(elem)} onChange={() => handleSelect(elem)}/>
-                    <label className={style.filterElement__label} htmlFor={`color${t(elem, "ru")}`}>{elem}</label>
+                    <label className={style.filterElement__label} htmlFor={`color${elem}`}>{t(elem, "eng", "ru")}</label>
                 </div>
             ))}
         </div>

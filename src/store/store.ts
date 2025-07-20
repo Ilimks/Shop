@@ -15,6 +15,8 @@ import productsReducer from "./slices/productsSlice";
 import cartReducer from "./slices/cartSlice";
 import authReducer from "./slices/authSlice";
 import orderReducer from "./slices/orderSlice";
+import filterReudser from "./slices/filterSlice"
+import cardCounterReudser from "./slices/cardCounterSlice"
 import adminReducer from './slices/adminSlice';
 
 const persistConfig = {
@@ -28,8 +30,11 @@ const rootReducer = combineReducers({
   cart: cartReducer,
   auth: authReducer,
   orders: orderReducer,
+  filter: filterReudser,
+  cardCouter: cardCounterReudser,
   admin: adminReducer
 });
+
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
@@ -47,3 +52,4 @@ export const persistor = persistStore(store);
 
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
+

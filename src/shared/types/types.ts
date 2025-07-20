@@ -1,10 +1,21 @@
-export interface ProductCardProps {
+export interface IProductCardProps {
     title: string;
     price: number;
     image: string;
+    description: string;
+    country: string;
+    sizes: string[];
+    colors: string[];
+    sale?: number;
+    category: string;
+    sex: "male" | "female" | "unisex"
     maker: string;
     oldPrice: number;
 };
+
+export interface IProductCard extends IProductCardProps {
+    id: string;
+}
 
 export interface ButtonProps {
     text: string | boolean;
